@@ -9,7 +9,6 @@ hasSpanish: true
 ---
 
 ```bash
-
 awk 'pattern {action}' file
 ```
 
@@ -34,6 +33,7 @@ Use **`awk`** to extract specific fields or columns from text files, such as log
 ```bash
 
 awk '{print $1, $3, $NF}' file.txt
+
 ```
 
 ### Print Lines Where the Last Field Matches a Pattern
@@ -43,6 +43,7 @@ To print lines where the last field matches a specific pattern.
 ```bash
 
 awk '$NF ~ /pattern/' file.txt
+
 ```
 
 ### Print the Second-to-Last Field
@@ -52,6 +53,7 @@ To print the second-to-last field of each line, you can use `$(NF-1)`.
 ```bash
 
 awk '{print $(NF-1)}' file.txt
+
 ```
 
 ### Filtering Rows Based on a Condition
@@ -61,6 +63,7 @@ awk '{print $(NF-1)}' file.txt
 ```bash
 
 awk '/pattern/ {print $0}' file.txt
+
 ```
 
 ### Processing Log Files
@@ -70,6 +73,7 @@ Use **`awk`** to process log files and extract meaningful information.
 ```bash
 
 awk '$3 == "ERROR" {print $0}' logfile.txt
+
 ```
 
 This command prints all lines where the third column is "ERROR".
@@ -81,6 +85,7 @@ This command prints all lines where the third column is "ERROR".
 ```bash
 
 awk '{sum += $1} END {print sum}' numbers.txt
+
 ```
 
 This command sums up the values in the first column of `numbers.txt` and prints the total.
@@ -94,6 +99,7 @@ This command sums up the values in the first column of `numbers.txt` and prints 
 ```bash
 
 awk '{gsub(/oldtext/, "newtext"); print}' file.txt
+
 ```
 
 This command replaces all occurrences of "oldtext" with "newtext" in `file.txt`.
@@ -105,6 +111,7 @@ This command replaces all occurrences of "oldtext" with "newtext" in `file.txt`.
 ```bash
 
 awk -F',' '{print $1, $2}' file.csv
+
 ```
 
 This command uses a comma as the field separator and prints the first and second columns of a CSV file.
@@ -116,6 +123,7 @@ This command uses a comma as the field separator and prints the first and second
 ```bash
 
 awk '{if ($1 > 100 && $2 < 50) print $0}' file.txt
+
 ```
 
 This command prints lines where the first column is greater than 100 and the second column is less than 50.
@@ -127,6 +135,7 @@ This command prints lines where the first column is greater than 100 and the sec
 ```bash
 
 awk '{printf "Name: %s, Age: %d\n", $1, $2}' file.txt
+
 ```
 
 This command prints the first and second columns in a formatted way.
@@ -138,6 +147,7 @@ This command prints the first and second columns in a formatted way.
 ```bash
 
 awk '{arr[$1]++} END {for (i in arr) print i, arr[i]}' file.txt
+
 ```
 
 This command counts the occurrences of each unique value in the first column and prints the results.

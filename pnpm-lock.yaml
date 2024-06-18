@@ -35,6 +35,9 @@ importers:
       astro:
         specifier: ^4.4.15
         version: 4.4.15(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2)(typescript@5.4.2)
+      astro-breadcrumbs:
+        specifier: ^2.3.1
+        version: 2.3.1(astro@4.4.15(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2)(typescript@5.4.2))
       astro-compress:
         specifier: ^2.2.15
         version: 2.2.15
@@ -1825,6 +1828,11 @@ packages:
   arraybuffer.prototype.slice@1.0.3:
     resolution: {integrity: sha512-bMxMKAjg13EBSVscxTaYA4mRc5t1UAXa2kXiGTNfZ079HIWXEkKmkgFrh/nJqamaLSrXO5H4WFFkPEaLJWbs3A==}
     engines: {node: '>= 0.4'}
+
+  astro-breadcrumbs@2.3.1:
+    resolution: {integrity: sha512-9SUAGZiUP9iCnYOdtngZpHk1Fyge78T3tR7QR1mdx5qjOv1jIGXxtqCdxL84rMJsxgGg+NEI72rb1lK7AeCb+w==}
+    peerDependencies:
+      astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0
 
   astro-compress@2.2.15:
     resolution: {integrity: sha512-ZiN+DanwGu/LbLdJ9Y7YAMxW0jTetFjmgjn34EVpDFwI8te+m4d4bOGY+mjGa58kyUC6YsmEW7YNx3HdWyfX5A==}
@@ -6732,6 +6740,10 @@ snapshots:
       get-intrinsic: 1.2.4
       is-array-buffer: 3.0.4
       is-shared-array-buffer: 1.0.3
+
+  astro-breadcrumbs@2.3.1(astro@4.4.15(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2)(typescript@5.4.2)):
+    dependencies:
+      astro: 4.4.15(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2)(typescript@5.4.2)
 
   astro-compress@2.2.15:
     dependencies:
