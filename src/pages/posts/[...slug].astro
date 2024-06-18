@@ -44,6 +44,7 @@ interface Post {
   published: Date
   tags: string[]
   category: string
+  imageWidth: string
 
   nextSlug: string
   prevSlug: string
@@ -127,11 +128,13 @@ const jsonLd = {
 
       {
         entry.data.image && (
-          <ImageWrapper
-            src={entry.data.image}
-            basePath={path.join("content/posts/", getDir(entry.id))}
-            class="mb-8 rounded-xl banner-container onload-animation"
-          />
+          <div class={entry.data.imageWidth}>
+            <ImageWrapper
+              src={entry.data.image}
+              basePath={path.join("content/posts/", getDir(entry.id))}
+              class="mb-8 rounded-xl banner-container onload-animation"
+            />
+          </div>
         )
       }
 

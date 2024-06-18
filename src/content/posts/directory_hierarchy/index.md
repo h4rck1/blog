@@ -1,16 +1,16 @@
 ---
-title: Directory Hierarchy
+title: Directory Tree
 published: 2024-06-14
-description: "This is a desc"
+description: "A brief overview about multi-level hierarchy structure in Unix."
 image: "./cover.png"
-tags: [Hierarchy]
+tags: [Fundamentals, Hierarchy]
 category: Linux
 draft: false
 ---
 
 ### **`/` (Root Directory)**
 
- The top-level directory of the filesystem. All other directories are subdirectories of the root directory.
+The top-level directory of the filesystem. All other directories are subdirectories of the root directory.
 
 - **Files**: Contains system directories like `bin`, `etc`, `home`, `lib`, `usr`, etc.
 
@@ -38,7 +38,7 @@ Contains device files.
 
 ### **`/etc` (Etcetera)**
 
- Contains configuration files.
+Contains configuration files.
 
 - **Name**: "etc" originally stood for etcetera, a place to store configuration files.
 - **Files**: System-wide configuration files.

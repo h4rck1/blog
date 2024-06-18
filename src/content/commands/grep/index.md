@@ -154,8 +154,6 @@ grep --color "pattern" file.txt
 
 ```
 
----
-
 ## [NUM] Context
 
 ### **`-A [NUM]`**
@@ -187,8 +185,6 @@ Displays [NUM] lines before and after each matching line.
 grep -C 3 "pattern" file.txt
 
 ```
-
----
 
 ## Comparing files
 

@@ -1,6 +1,6 @@
 ---
 title: Linux Advanced Commands
-published: 2024-06-17
+published: 2024-06-16
 description: Advanced commands for linux you need to now.
 tags: [Fundamentals, Commands]
 category: Linux
