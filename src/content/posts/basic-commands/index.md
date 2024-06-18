@@ -327,25 +327,31 @@ draft: false
     <tr>
         <td><code>awk</code></td>
         <td>
-            Shows the running processes.
+           Performs different operations with text.
+        </td>
+    </tr>
+    <tr>
+        <td><code>grep</code></td>
+        <td>
+           Filters results.
         </td>
     </tr>
     <tr>
         <td><code>xargs</code></td>
         <td>
-            Displays a real-time list of running processes.
+            Grabs the output
         </td>
     </tr>
     <tr>
         <td><code>alias</code></td>
         <td>
-            Similar to top, but with an interactive and user-friendly interface.
+            Create command aliases.
         </td>
     </tr>
     <tr>
         <td><code>history</code></td>
         <td>
-           Kills a running process.
+           Show command history.
 	    </td>
     </tr>
   <tr>

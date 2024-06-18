@@ -9,4 +9,8 @@ draft: false
 
 <!-- ## Click on the command name to show details -->
 
-# [find](/commands/find/)
+| Command link            | Descripition                             |
+| ----------------------- | ---------------------------------------- |
+| [find](/commands/find/) | Finds something in a path.               |
+| [grep](/commands/grep/) | Filters results.                         |
+| [awk](/commands/awk/)   | Performs different operations with text. |

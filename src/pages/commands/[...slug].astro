@@ -67,6 +67,8 @@ const { Content } = await entry.render()
 
 const { remarkPluginFrontmatter } = await entry.render()
 
+console.log("entry", entry)
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -108,7 +110,7 @@ const jsonLd = {
             </div>
             <div class="flex flex-row flex-nowrap items-center">
               <a
-                href={`/commands/find/es/`}
+                href={`/commands/${entry.slug}/es/`}
                 aria-label="View post in spanish"
                 class="link-lg transition text-50 text-sm font-medium
                                     hover:text-[var(--primary)] dark:hover:text-[var(--primary)] whitespace-nowrap"
@@ -136,13 +138,15 @@ const jsonLd = {
           >
             {entry.data.title}
           </div>
-          <div class="mx-3">
-            <span
-              class="transition font-bold md:text-[1.3rem]/[1.55rem] text-black/90 code-version px-1"
-            >
-              es
-            </span>
-          </div>
+          {
+            isSpanish && (
+              <div class="mx-3">
+                <span class="transition font-bold md:text-[1.3rem]/[1.55rem] text-black/90 code-version px-1">
+                  es
+                </span>
+              </div>
+            )
+          }
         </div>
       </div>
 

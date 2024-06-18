@@ -1,11 +1,11 @@
 ---
-title: "Grep"
-description: "An advanced guide about grep command in linux"
+title: "Awk"
+description: "An advanced guide about awk command in linux"
 published: 2024-06-14
 author: "h4rck1"
 category: Linux
 tags: ["linux", "command"]
-hasSpanish: true
+isSpanish: true
 ---
 
 <!-- ### [`Este articulo está disponible en español!`](/posts/advanced-commands/) -->
