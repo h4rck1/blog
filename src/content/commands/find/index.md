@@ -5,7 +5,7 @@ published: 2024-06-14
 author: "h4rck1"
 category: Linux
 tags: ["linux", "command"]
-spanish: true
+hasSpanish: true
 ---
 
 <!-- ### [`Este articulo está disponible en español!`](/posts/advanced-commands/) -->

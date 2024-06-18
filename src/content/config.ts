@@ -9,7 +9,8 @@ const postsCollection = defineCollection({
     image: z.string().optional(),
     tags: z.array(z.string()).optional(),
     category: z.string().optional(),
-    spanish: z.boolean().optional(),
+    hasSpanish: z.boolean().optional().default(false),
+    isSpanish: z.boolean().optional().default(false),
 
     //Astro
     nextSlug: z.string().optional(),
