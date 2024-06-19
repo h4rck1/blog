@@ -1,3 +1,4 @@
+import type { LANGUAGE } from '@/types/config'
 import { siteConfig } from '../config'
 import type I18nKey from './i18nKey'
 import { en } from './languages/en'
@@ -29,6 +30,6 @@ export function getTranslation(lang: string): Translation {
 }
 
 export function i18n(key: I18nKey): string {
-  const lang = siteConfig.lang || 'en'
-  return getTranslation(lang)[key]
+  const language = siteConfig.lang || 'en'
+  return getTranslation(language)[key]
 }

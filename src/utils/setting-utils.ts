@@ -65,5 +65,27 @@ export function setLanguage(lang: LANGUAGE): void {
 }
 
 export function getStoredLanguage(): LANGUAGE {
-  return localStorage.getItem('language') as LANGUAGE
+  return (localStorage?.getItem('language') as LANGUAGE) || 'en'
+}
+
+export async function setLanguageAPI(newLang: LANGUAGE) {
+  const toSend = JSON.stringify({ language: newLang })
+
+  const response = await fetch('/api/updateLang/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: toSend,
+  })
+
+  const result = await response.json()
+  if (result.success) {
+    window.location.reload()
+  } else {
+    console.error(
+      'Error while trying to change language:',
+      result.completeError,
+    )
+  }
 }

@@ -16,7 +16,8 @@
       "@utils/*": ["src/utils/*"],
       "@i18n/*": ["src/i18n/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@api/*": ["src/api/*"]
     }
   },
   "include": ["src/**/*"],

@@ -3,13 +3,16 @@
   import I18nKey from "@i18n/i18nKey"
   import Icon from "@iconify/svelte"
 
-  import { getStoredLanguage, setLanguage } from "@utils/setting-utils.ts"
+  import {
+    getStoredLanguage,
+    setLanguage,
+    setLanguageAPI,
+  } from "@utils/setting-utils.ts"
   import type { LANGUAGE } from "@/types/config"
   import { EN_en, ES_es } from "@constants/constants"
 
-  function swichLang(lang: LANGUAGE) {
-    console.log("Changing language to: ", lang)
-    setLanguage(lang)
+  async function swichLang(lang: LANGUAGE) {
+    await setLanguageAPI(lang)
   }
 </script>
 

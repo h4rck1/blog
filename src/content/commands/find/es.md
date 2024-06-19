@@ -10,4 +10,4 @@ isSpanish: true
 
 <!-- ### [`Este articulo está disponible en español!`](/posts/advanced-commands/) -->
 
-El comando `find` en Linux es extremadamente poderoso...
+El comando `find` en Linux mira prro
