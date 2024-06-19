@@ -55,7 +55,7 @@ function formatDate(date: Date) {
 }
 
 function formatTag(tag: string[]) {
-    return tag.map(t => `#${t}`).join(' ');
+    return tag.map(t => `#${i18n(t.toLowerCase() as I18nKey)}`).join(' ');
 }
 
 ---

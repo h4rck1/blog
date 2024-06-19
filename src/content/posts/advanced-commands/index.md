@@ -7,8 +7,6 @@ category: Linux
 draft: false
 ---
 
-<!-- ## Click on the command name to show details -->
-
 | Command link            | Descripition                             |
 | ----------------------- | ---------------------------------------- |
 | [find](/commands/find/) | Finds something in a path.               |

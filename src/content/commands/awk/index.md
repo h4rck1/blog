@@ -26,7 +26,7 @@ awk 'pattern {action}' file
 - **`RS`**: Record separator (default is newline).
 - **`ORS`**: Output record separator.
 
-### Printing Specific Columns
+### Printing specific columns
 
 Use **`awk`** to extract specific fields or columns from text files, such as log files or command outputs.
 
@@ -36,7 +36,7 @@ awk '{print $1, $3, $NF}' file.txt
 
 ```
 
-### Print Lines Where the Last Field Matches a Pattern
+### Print lines where the last field matches a pattern
 
 To print lines where the last field matches a specific pattern.
 
@@ -46,7 +46,7 @@ awk '$NF ~ /pattern/' file.txt
 
 ```
 
-### Print the Second-to-Last Field
+### Print the second-to-last field
 
 To print the second-to-last field of each line, you can use `$(NF-1)`.
 
@@ -56,7 +56,7 @@ awk '{print $(NF-1)}' file.txt
 
 ```
 
-### Filtering Rows Based on a Condition
+### Filtering rows based on a condition
 
 **`awk`** can be used to filter rows that meet certain conditions, such as rows containing specific text.
 
@@ -66,7 +66,7 @@ awk '/pattern/ {print $0}' file.txt
 
 ```
 
-### Processing Log Files
+### Processing log files
 
 Use **`awk`** to process log files and extract meaningful information.
 
@@ -78,7 +78,7 @@ awk '$3 == "ERROR" {print $0}' logfile.txt
 
 > This command prints all lines where the third column is "ERROR".
 
-### Calculating Statistics
+### Calculating statistics
 
 `awk` can perform calculations, making it useful for generating statistics from data.
 
@@ -90,9 +90,9 @@ awk '{sum += $1} END {print sum}' numbers.txt
 
 > This command sums up the values in the first column of `numbers.txt` and prints the total.
 
-## Less Common but Very Useful Uses
+## Less common but very useful uses
 
-### Replacing Text in a File
+### Replacing text in a file
 
 **`awk`** can be used to replace text in a file.
 
@@ -104,7 +104,7 @@ awk '{gsub(/oldtext/, "newtext"); print}' file.txt
 
 > This command replaces all occurrences of "oldtext" with "newtext" in `file.txt`.
 
-### Field Separator
+### Field separator
 
 **`awk`** can handle different field separators, not just spaces or tabs.
 
@@ -116,7 +116,7 @@ awk -F',' '{print $1, $2}' file.csv
 
 > This command uses a comma as the field separator and prints the first and second columns of a CSV file.
 
-### Complex Conditional Statements
+### Complex conditional statements
 
 **`awk`** can use complex conditional statements for more sophisticated data processing.
 

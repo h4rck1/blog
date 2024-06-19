@@ -22,7 +22,7 @@ enum I18nKey {
 
   themeColor = 'themeColor',
 
-  lightMode =  'lightMode',
+  lightMode = 'lightMode',
   darkMode = 'darkMode',
   systemMode = 'systemMode',
 
@@ -31,6 +31,17 @@ enum I18nKey {
   author = 'author',
   publishedAt = 'publishedAt',
   license = 'license',
+
+  search = 'search',
+
+  //tags
+  commands = 'commands',
+  fundamentals = 'fundamentals',
+  hierarchy = 'hierarchy',
+  other = 'other',
+  permissions = 'permissions',
+  redirectors = 'redirectors',
+  regex = 'regex',
 }
 
 export default I18nKey

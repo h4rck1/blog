@@ -1,10 +1,17 @@
-import { getCollection } from 'astro:content'
+import { type ContentEntryMap, getCollection } from 'astro:content'
+import { siteConfig } from '@/config'
+import { ES_es } from '@constants/constants'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
+import { boolean } from 'astro/zod'
+import { collections } from './../content/config'
 
-export async function getSortedPosts() {
-  const allBlogPosts = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
+export async function getSortedCollectionByLanguage(
+  collection: keyof ContentEntryMap,
+  filter = (data: any) => true,
+) {
+  const allBlogPosts = await getCollection(collection, ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : filter(data)
   })
   const sorted = allBlogPosts.sort((a, b) => {
     const dateA = new Date(a.data.published)
@@ -22,6 +29,14 @@ export async function getSortedPosts() {
   }
 
   return sorted
+}
+
+export async function getSortedPosts() {
+  return getSortedCollectionByLanguage('posts', data => {
+    if (siteConfig.lang === ES_es) return data.isSpanish
+
+    return !data.isSpanish
+  })
 }
 
 export async function getSortedCommands() {

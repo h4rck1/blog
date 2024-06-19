@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   })
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry }
+    props: { entry },
   }))
 }
 
@@ -63,13 +63,11 @@ const {
   tags,
   category,
   hasSpanish,
-  isSpanish
+  isSpanish,
 } = entry.data
 const { Content } = await entry.render()
 
 const { remarkPluginFrontmatter } = await entry.render()
-
-console.log("entry", entry)
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -80,9 +78,9 @@ const jsonLd = {
   author: {
     "@type": "Person",
     name: profileConfig.name,
-    url: Astro.site
+    url: Astro.site,
   },
-  datePublished: formatDateToYYYYMMDD(entry.data.published)
+  datePublished: formatDateToYYYYMMDD(entry.data.published),
   // TODO include cover image here
 }
 ---
@@ -100,7 +98,7 @@ const jsonLd = {
       id="post-container"
       class:list={[
         "card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full ",
-        {}
+        {},
       ]}
     >
       <!-- <Breadcrumbs>
