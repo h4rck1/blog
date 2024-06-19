@@ -5,160 +5,160 @@ published: 2024-06-14
 author: "h4rck1"
 category: Linux
 tags: ["linux", "command"]
-hasSpanish: true
+isSpanish: true
 ---
 
 ```bash
-# You can use it like this
-grep [options] pattern [file]
+# Puedes usarlo así
+grep [opciones] [patrón] [archivo]
 
-# Or with pipe(|)
-cat [file] | grep [options] pattern
+# O con pipe (|)
+cat [archivo] | grep [opciones] [patrón]
 ```
 
-- **options**: Modify the behavior of the filter.
-- **pattern**: The text or regular expression you want to search for.
-- **file**: The files in which you want to search. If not specified, `grep` searches in the standard input.
+- **opciones**: Modifican el comportamiento del filtro.
+- **patrón**: El texto o expresión regular que quieres buscar.
+- **archivo**: Los archivos en los que quieres buscar. Si no se especifica, grep busca en la entrada estándar.
 
-### Main options of `grep`
+### Opciones principales de `grep`
 
 ### `-i`
 
-Ignores case while searching.
+Ignora mayúsculas y minúsculas al buscar.
 
 ```bash
 
-grep -i "pattern" file.txt
+grep -i "patrón" archivo.txt
 
 ```
 
 ### **`-v`**
 
-Inverts the match, showing lines that do not contain the pattern.
+Invierte la coincidencia, mostrando líneas que no contienen el patrón.
 
 ```bash
 
-grep -v "pattern" file.txt
+grep -v "patrón" archivo.txt
 
 ```
 
 ### **`-r`**
 
-Searches recursively in directories.
+Busca recursivamente en directorios.
 
 ```bash
 
-grep -r "pattern" directory/
+grep -r "patrón" directorio/
 
 ```
 
 ### **`-w`**
 
-Searches for whole words.
+Busca palabras completas.
 
 ```bash
 
-grep -w "pattern" file.txt
+grep -w "patrón" archivo.txt
 
 ```
 
 ### **`-E`**
 
-Uses extended regular expressions.
+Utiliza expresiones regulares extendidas.
 
 ```bash
 
-grep -E "pattern|another" file.txt
+grep -E "patrón|another" archivo.txt
 
 ```
 
 ### **`-e`**
 
-Allows specifying multiple patterns.
+Permite especificar múltiples patrones.
 
 ```bash
 
-grep -e "pattern1" -e "pattern2" file.txt
+grep -e "patrón1" -e "patrón2" archivo.txt
 
 ```
 
 ### **`-n`**
 
-Displays the line numbers along with the matching lines.
+Muestra los números de línea junto con las líneas que coinciden.
 
 ```bash
 
-grep -n "pattern" file.txt
+grep -n "patrón" archivo.txt
 
 ```
 
 ### **`-c`**
 
-Displays only the count of matching lines.
+Muestra solo el conteo de líneas que coinciden.
 
 ```bash
 
-grep -c "pattern" file.txt
+grep -c "patrón" archivo.txt
 
 ```
 
 ### **`-o`**
 
-Displays only the matching parts of the lines.
+Muestra solo las partes de las líneas que coinciden.
 
 ```bash
 
-grep -o "pattern" file.txt
+grep -o "patrón" archivo.txt
 
 ```
 
 ### **`-H`**
 
-Displays the file name with the matching lines. Useful when searching in multiple files.
+Muestra el nombre del archivo con las líneas que coinciden. Útil al buscar en múltiples archivos.
 
 ```bash
 
-grep -H "pattern" file1.txt file2.txt
+grep -H "patrón" file1.txt file2.txt
 
 ```
 
 ### **`-h`**
 
-Does not display the file names in the output. Useful when searching in multiple files.
+No muestra los nombres de los archivos en la salida. Útil al buscar en múltiples archivos.
 
 ```bash
 
-grep -h "pattern" file1.txt file2.txt
+grep -h "patrón" file1.txt file2.txt
 
 ```
 
 ### **`-f`**
 
-Takes patterns from a file.
+Toma patrones de un archivo.
 
 ```bash
 
-grep -f patterns.txt file.txt
+grep -f patróns.txt archivo.txt
 
 ```
 
 ### **`-x`**
 
-Matches entire lines exactly with the pattern.
+Coincide líneas enteras exactamente con el patrón.
 
 ```bash
 
-grep -x "pattern" file.txt
+grep -x "patrón" archivo.txt
 
 ```
 
 ### **`-color`**
 
-Highlights the matching pattern in the output.
+Resalta el patrón que coincide en la salida.
 
 ```bash
 
-grep --color "pattern" file.txt
+grep --color "patrón" archivo.txt
 
 ```
 
@@ -166,52 +166,52 @@ grep --color "pattern" file.txt
 
 ### **`-A [NUM]`**
 
-Displays [NUM] lines after each matching line.
+Muestra el [NUM] líneas después de cada línea que coincide.
 
 ```bash
 
-grep -A 3 "pattern" file.txt
+grep -A 3 "patrón" archivo.txt
 
 ```
 
 ### **`-B [NUM]`**
 
-Displays [NUM] lines before each matching line.
+Muestra el [NUM] líneas antes de cada línea que coincide.
 
 ```bash
 
-grep -B 3 "pattern" file.txt
+grep -B 3 "patrón" archivo.txt
 
 ```
 
 ### **`-C [NUM]`**
 
-Displays [NUM] lines before and after each matching line.
+Muestra el [NUM] líneas antes y después de cada línea que coincide.
 
 ```bash
 
-grep -C 3 "pattern" file.txt
+grep -C 3 "patrón" archivo.txt
 
 ```
 
-## Comparing files
+## Comparación de archivos
 
 ### **`-l`**
 
-Displays only the names of files containing the pattern.
+Muestra solo los nombres de los archivos que contienen el patrón.
 
 ```bash
 
-grep -l "pattern" file1.txt file2.txt
+grep -l "patrón" file1.txt file2.txt
 
 ```
 
 ### **`-L`**
 
-Displays only the names of files that do not contain the pattern.
+Muestra solo los nombres de los archivos que no contienen el patrón.
 
 ```bash
 
-grep -L "pattern" file1.txt file2.txt
+grep -L "patrón" file1.txt file2.txt
 
 ```

@@ -1,205 +1,204 @@
 ---
 title: RegEx
 published: 2024-06-19
-description: "A basic guide about RegEx."
+description: "Una guía básica de RegEx."
 image: "./cover.jpg"
 tags: [Other, RegEx]
 category: Linux
+isSpanish: true
 ---
 
-Regular expressions `RegEx` are powerful tools used for pattern matching and text manipulation in various programming and scripting languages. They allow users to search, match, and manipulate text based on specific patterns.
+Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la coincidencia de patrones y la manipulación de texto en varios lenguajes de programación y scripting. Permiten a los usuarios buscar, coincidir y manipular texto basado en patrones específicos.
 
-### Commonly Used Regular Expressions in Linux
+### Expresiones Regulares Comúnmente Usadas en Linux
 
-### Basic Concepts
+### Conceptos Básicos
 
-1. **Literal Characters**: Matches the exact characters.
-   - Example: `abc` matches "abc".
-2. **Metacharacters**: Special characters that have specific meanings in regex.
+1. **Caracteres Literales**: Coinciden con los caracteres exactos.
+   - Ejemplo: `abc` coincide con "abc".
+2. **Metacaracteres**: Caracteres especiales que tienen significados específicos en regex.
 
-   - `.` Matches any single character except a newline.
-   - `*` Matches zero or more occurrences of the preceding element.
-   - `+` Matches one or more occurrences of the preceding element.
-   - `?` Matches zero or one occurrence of the preceding element.
-   - `^` Matches the start of a line.
-   - `$` Matches the end of a line.
-   - `[]` Matches any single character within the brackets.
-   - `|` OR operator, matches either the pattern before or after the `|`.
-   - `()` Groups multiple tokens together and remembers the matched text.
-   - `\` Escapes a metacharacter to be used as a literal.
+   - `.` Coincide con cualquier carácter excepto un salto de línea.
+   - `*` Coincide con cero o más ocurrencias del elemento anterior.
+   - `+` Coincide con una o más ocurrencias del elemento anterior.
+   - `?` Coincide con cero o una ocurrencia del elemento anterior.
+   - `^` Coincide con el inicio de una línea.
+   - `$` Coincide con el final de una línea.
+   - `[]` Coincide con cualquier carácter dentro de los corchetes.
+   - `|` Operador OR, coincide con el patrón antes o después del `|`.
+   - `()` Agrupa múltiples tokens juntos y recuerda el texto coincidente.
+   - `\` Escapa un metacaracter para ser utilizado como un literal.
 
-   ***
+## Ejemplos y Uso
 
-### Examples and Usage
+1. **Coincidencia Literal**
 
-1. **Literal Match**
-
-   Matches the exact characters in the text.
+   Coincide con los caracteres exactos en el texto.
 
    ```bash
-   grep "abc" file.txt
+   grep "abc" archivo.txt
    ```
 
-   > This command searches for the string `abc`.
+   > Este comando busca la cadena `abc`.
 
-2. **Dot `.`**
+2. **Punto `.`**
 
-   Matches any single character except a newline.
+   Coincide con cualquier carácter excepto un salto de línea.
 
    ```bash
-   grep "a.c" file.txt
+   grep "a.c" archivo.txt
    ```
 
-   > This command matches `abc`, `a1c`, `a-c`, etc.
+   > Este comando coincide con `abc`, `a1c`, `a-c`, etc.
 
-3. **Asterisk `\*`**
+3. **Asterisco `*`**
 
-   Matches zero or more occurrences of the preceding element.
+   Coincide con cero o más ocurrencias del elemento anterior.
 
    ```bash
-   grep "ab*c" file.txt
+   grep "ab*c" archivo.txt
    ```
 
-   > This command matches `ac`, `abc`, `abbc`, `abbbc`, etc.
+   > Este comando coincide con `ac`, `abc`, `abbc`, `abbbc`, etc.
 
-4. **Plus `+`**
+4. **Más `+`**
 
-   Matches one or more occurrences of the preceding element.
+   Coincide con una o más ocurrencias del elemento anterior.
 
    ```bash
-   grep "ab+c" file.txt
+   grep "ab+c" archivo.txt
    ```
 
-   > This command matches `abc`, `abbc`, `abbbc`, etc. But not `ac`.
+   > Este comando coincide con `abc`, `abbc`, `abbbc`, etc. Pero no con `ac`.
 
-5. **Question Mark `?`**
+5. **Signo de Interrogación `?`**
 
-   Matches zero or one occurrence of the preceding element.
+   Coincide con cero o una ocurrencia del elemento anterior.
 
    ```bash
-   grep "ab?c" file.txt
+   grep "ab?c" archivo.txt
    ```
 
-   > This command matches `ac` and `abc`.
+   > Este comando coincide con `ac` y `abc`.
 
 6. **Caret `^`**
 
-   Matches the start of a line.
+   Coincide con el inicio de una línea.
 
    ```bash
-   grep "^abc" file.txt
+   grep "^abc" archivo.txt
    ```
 
-   > This command matches any line that starts with `abc` .
+   > Este comando coincide con cualquier línea que comience con `abc`.
 
-7. **Dollar `$`**
+7. **Signo de Dólar `$`**
 
-   Matches the end of a line.
+   Coincide con el final de una línea.
 
    ```bash
-   grep "abc$" file.txt
+   grep "abc$" archivo.txt
    ```
 
-   > This command matches any line that ends with `abc`.
+   > Este comando coincide con cualquier línea que termine con `abc`.
 
-8. **Brackets `[]`**
+8. **Corchetes `[]`**
 
-   Matches any single character within the brackets.
+   Coincide con cualquier carácter dentro de los corchetes.
 
    ```bash
-   grep "[aeiou]" file.txt
+   grep "[aeiou]" archivo.txt
    ```
 
-   > This command matches any line containing a vowel `a`, `e`, `i`, `o`, `u`.
+   > Este comando coincide con cualquier línea que contenga una vocal `a`, `e`, `i`, `o`, `u`.
 
-9. **Negation within Brackets `[^]`**
+9. **Negación dentro de Corchetes `[^]`**
 
-   Matches any single character not within the brackets.
+   Coincide con cualquier carácter que no esté dentro de los corchetes.
 
    ```bash
-   grep "[^aeiou]" file.txt
+   grep "[^aeiou]" archivo.txt
    ```
 
-   > This command matches any line containing a character that is not a vowel.
+   > Este comando coincide con cualquier línea que contenga un carácter que no sea una vocal.
 
 10. **OR `|`**
 
-    Matches either the pattern before or the pattern after the `|`.
+    Coincide con el patrón antes o después del `|`.
 
     ```bash
-    grep "abc\|def" file.txt
+    grep "abc\|def" archivo.txt
     ```
 
-    > This command matches lines containing either `abc` or `def`.
+    > Este comando coincide con líneas que contengan `abc` o `def`.
 
-11. **Grouping `()`**
+11. **Agrupación `()`**
 
-    Groups multiple tokens together and remembers the matched text.
+    Agrupa múltiples tokens juntos y recuerda el texto coincidente.
 
     ```bash
-    grep "\(abc\)\{2,\}" file.txt
+    grep "\(abc\)\{2,\}" archivo.txt
     ```
 
-    > This command matches lines containing `abcabc` .
+    > Este comando coincide con líneas que contengan `abcabc`.
 
-12. **Escaping `\`**
+12. **Escape `\`**
 
-    Escapes a metacharacter to be used as a literal.
+    Escapa un metacaracter para ser utilizado como un literal.
 
     ```bash
-    grep "a\.c" file.txt
+    grep "a\.c" archivo.txt
     ```
 
-    > This command matches `a.c` in `file.txt`.
+    > Este comando coincide con `a.c` en `archivo.txt`.
 
-### Advanced Examples
+### Ejemplos Avanzados
 
-1. **Matching Word Boundaries**
+1. **Coincidiendo con Límites de Palabras**
 
-   Use `\b` to match word boundaries.
-
-   ```bash
-   grep "\bword\b" file.txt
-   ```
-
-   > This command matches the word `word` as a whole word.
-
-2. **Matching Digits**
-
-   Use `\d` to match any digit.
+   Usa `\b` para coincidir con límites de palabras.
 
    ```bash
-   grep "\d" file.txt
+   grep "\bword\b" archivo.txt
    ```
 
-   > This command matches any digit `0-9`.
+   > Este comando coincide con la palabra `word` como una palabra completa.
 
-3. **Matching Non-Digits**
+2. **Coincidiendo con Dígitos**
 
-   Use `\D` to match any non-digit.
+   Usa `\d` para coincidir con cualquier dígito.
 
    ```bash
-   grep "\D" file.txt
+   grep "\d" archivo.txt
    ```
 
-   > This command matches any `non-digit`.
+   > Este comando coincide con cualquier dígito `0-9`.
 
-4. **Matching Whitespace**
+3. **Coincidiendo con No-Dígitos**
 
-   Use `\s` to match any whitespace character.
+   Usa `\D` para coincidir con cualquier no-dígito.
 
    ```bash
-   grep "\s" file.txt
+   grep "\D" archivo.txt
    ```
 
-   > This command matches any whitespace character `space`, `tab`, etc.
+   > Este comando coincide con cualquier `no-dígito`.
 
-5. **Matching Non-Whitespace**
+4. **Coincidiendo con Espacios en Blanco**
 
-   Use `\S` to match any non-whitespace character.
+   Usa `\s` para coincidir con cualquier carácter de espacio en blanco.
 
    ```bash
-   grep "\S" file.txt
+   grep "\s" archivo.txt
    ```
 
-   > This command matches any `non-whitespace` character.
+   > Este comando coincide con cualquier carácter de espacio en blanco `espacio`, `tabulación`, etc.
+
+5. **Coincidiendo con No-Espacios en Blanco**
+
+   Usa `\S` para coincidir con cualquier carácter que no sea espacio en blanco.
+
+   ```bash
+   grep "\S" archivo.txt
+   ```
+
+   > Este comando coincide con cualquier carácter que no sea `espacio en blanco`.

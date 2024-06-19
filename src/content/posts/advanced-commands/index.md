@@ -1,14 +1,14 @@
 ---
-title: Linux Advanced Commands
+title: Comandos avanzados de Linux
 published: 2024-06-16
-description: Advanced commands for linux you need to now.
+description: Comandos avanzados de Linux que deberías saber.
 tags: [Fundamentals, Commands]
 category: Linux
-draft: false
+isSpanish: true
 ---
 
-| Command link            | Descripition                             |
-| ----------------------- | ---------------------------------------- |
-| [find](/commands/find/) | Finds something in a path.               |
-| [grep](/commands/grep/) | Filters results.                         |
-| [awk](/commands/awk/)   | Performs different operations with text. |
+| Enlace del Comando      | Descripción                               |
+| ----------------------- | ----------------------------------------- |
+| [find](/commands/find/) | Encuentra algo en una ruta.               |
+| [grep](/commands/grep/) | Filtra resultados.                        |
+| [awk](/commands/awk/)   | Realiza diferentes operaciones con texto. |

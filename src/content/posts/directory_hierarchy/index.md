@@ -1,146 +1,146 @@
 ---
-title: Directory Tree
+title: Árbol de Directorios
 published: 2024-06-14
-description: "A brief overview about multi-level hierarchy structure in Unix."
+description: "Una breve descripción de la estructura jerárquica multinivel en Unix."
 image: "./cover.png"
 tags: [Fundamentals, Hierarchy]
 category: Linux
-draft: false
+isSpanish: true
 ---
 
-### **`/` (Root Directory)**
+### **`/` (Directorio Raíz)**
 
-The top-level directory of the filesystem. All other directories are subdirectories of the root directory.
+El directorio de nivel superior del sistema de archivos. Todos los demás directorios son subdirectorios del directorio raíz.
 
-- **Files**: Contains system directories like `bin`, `etc`, `home`, `lib`, `usr`, etc.
+- **Archivos**: Contiene directorios del sistema como `bin`, `etc`, `home`, `lib`, `usr`, etc.
 
-### **`/bin` (Binaries)**
+### **`/bin` (Binarios)**
 
-Contains essential binary executables.
+Contiene ejecutables binarios esenciales.
 
-- **Files**: System binaries needed for basic functionality.
-- **Examples**: `ls`, `cp`, `mv`, `bash`.
+- **Archivos**: Binarios del sistema necesarios para la funcionalidad básica.
+- **Ejemplos**: `ls`, `cp`, `mv`, `bash`.
 
 ### **`/boot`**
 
-Contains the files needed to boot the system.
+Contiene los archivos necesarios para arrancar el sistema.
 
-- **Name**: "boot" comes from the process of bootstrapping, which is loading the operating system.
-- **Files**: Kernel images, bootloader files.
-- **Examples**: `vmlinuz`, `initrd.img`, `grub`.
+- **Nombre**: "boot" proviene del proceso de bootstrapping, que es la carga del sistema operativo.
+- **Archivos**: Imágenes del kernel, archivos del cargador de arranque.
+- **Ejemplos**: `vmlinuz`, `initrd.img`, `grub`.
 
-### **`/dev` (Devices)**
+### **`/dev` (Dispositivos)**
 
-Contains device files.
+Contiene archivos de dispositivos.
 
-- **Files**: Special files that represent hardware devices.
-- **Examples**: `sda`, `tty`, `null`.
+- **Archivos**: Archivos especiales que representan dispositivos de hardware.
+- **Ejemplos**: `sda`, `tty`, `null`.
 
-### **`/etc` (Etcetera)**
+### **`/etc` (Etcétera)**
 
-Contains configuration files.
+Contiene archivos de configuración.
 
-- **Name**: "etc" originally stood for etcetera, a place to store configuration files.
-- **Files**: System-wide configuration files.
-- **Examples**: `fstab`, `hosts`, `passwd`.
+- **Nombre**: "etc" originalmente significaba etcétera, un lugar para almacenar archivos de configuración.
+- **Archivos**: Archivos de configuración del sistema.
+- **Ejemplos**: `fstab`, `hosts`, `passwd`.
 
 ### **`/home`**
 
-Contains user home directories.
+Contiene los directorios de inicio de los usuarios.
 
-- **Name**: "home" represents user home directories.
-- **Files**: Personal files and directories for each user.
-- **Examples**: `/home/user1`, `/home/user2`, `Documents`, `Downloads`.
+- **Nombre**: "home" representa los directorios de inicio de los usuarios.
+- **Archivos**: Archivos personales y directorios para cada usuario.
+- **Ejemplos**: `/home/user1`, `/home/user2`, `Documents`, `Downloads`.
 
-### **`/lib` (Libraries)**
+### **`/lib` (Bibliotecas)**
 
-Contains shared library files.
+Contiene archivos de bibliotecas compartidas.
 
-- **Files**: Essential shared libraries and kernel modules.
-- **Examples**: `libc.so.6`, `ld-linux.so.2`.
+- **Archivos**: Bibliotecas compartidas esenciales y módulos del kernel.
+- **Ejemplos**: `libc.so.6`, `ld-linux.so.2`.
 
 ### **`/media`**
 
-Mount point for removable media.
+Punto de montaje para medios removibles.
 
-- **Name**: "media" indicates media devices like CD-ROMs, USB drives.
-- **Files**: Mount points for removable media.
-- **Examples**: `/media/cdrom`, `/media/usb`.
+- **Nombre**: "media" indica dispositivos de medios como CD-ROM, unidades USB.
+- **Archivos**: Puntos de montaje para medios removibles.
+- **Ejemplos**: `/media/cdrom`, `/media/usb`.
 
-### **`/mnt` (Mount)**
+### **`/mnt` (Montaje)**
 
-Temporarily mounted filesystems.
+Sistemas de archivos montados temporalmente.
 
-- **Files**: Mount points for temporary mounts by the system administrator.
-- **Examples**: `/mnt/disk`, `/mnt/backup`.
+- **Archivos**: Puntos de montaje para montajes temporales por el administrador del sistema.
+- **Ejemplos**: `/mnt/disk`, `/mnt/backup`.
 
-### **`/opt` (Optional)**
+### **`/opt` (Opcional)**
 
-Contains add-on application software packages.
+Contiene paquetes de software adicionales.
 
-- **Files**: Optional software and third-party applications.
-- **Examples**: `/opt/vmware`, `/opt/google`.
+- **Archivos**: Software opcional y aplicaciones de terceros.
+- **Ejemplos**: `/opt/vmware`, `/opt/google`.
 
-### **`/proc` (Process)**
+### **`/proc` (Proceso)**
 
-Virtual filesystem providing process and kernel information.
+Sistema de archivos virtual que proporciona información sobre procesos y el kernel.
 
-- **Files**: Contains information about running processes.
-- **Examples**: `/proc/cpuinfo`, `/proc/meminfo`.
+- **Archivos**: Contiene información sobre los procesos en ejecución.
+- **Ejemplos**: `/proc/cpuinfo`, `/proc/meminfo`.
 
 ### **`/root`**
 
-Home directory for the root user.
+Directorio de inicio para el usuario root.
 
-- **Files**: Personal files and configuration files for the root user.
-- **Examples**: `/root/.bashrc`, `/root/.profile`.
+- **Archivos**: Archivos personales y de configuración para el usuario root.
+- **Ejemplos**: `/root/.bashrc`, `/root/.profile`.
 
 ### **`/run`**
 
-Contains runtime data for processes.
+Contiene datos en tiempo de ejecución para los procesos.
 
-- **Name Origin**: "run" indicates runtime data.
-- **Files**: Files like process IDs and sockets.
-- **Examples**: `/run/sshd.pid`, `/run/utmp`.
+- **Origen del Nombre**: "run" indica datos en tiempo de ejecución.
+- **Archivos**: Archivos como identificadores de procesos y sockets.
+- **Ejemplos**: `/run/sshd.pid`, `/run/utmp`.
 
-### **`/sbin` (System Binaries)**
+### **`/sbin` (Binarios del Sistema)**
 
-Contains essential system binaries.
+Contiene binarios esenciales del sistema.
 
-- **Files**: System binaries for system administration.
-- **Examples**: `ifconfig`, `reboot`, `shutdown`.
+- **Archivos**: Binarios del sistema para la administración del sistema.
+- **Ejemplos**: `ifconfig`, `reboot`, `shutdown`.
 
-### **`/srv` (Service)**
+### **`/srv` (Servicio)**
 
-Contains data for services provided by the system.
+Contiene datos para los servicios proporcionados por el sistema.
 
-- **Files**: Data for services like web servers.
-- **Examples**: `/srv/www`, `/srv/ftp`.
+- **Archivos**: Datos para servicios como servidores web.
+- **Ejemplos**: `/srv/www`, `/srv/ftp`.
 
-### **`/sys` (System)**
+### **`/sys` (Sistema)**
 
-Virtual filesystem providing system information.
+Sistema de archivos virtual que proporciona información del sistema.
 
-- **Files**: Contains information about devices, drivers, and kernels.
-- **Examples**: `/sys/class`, `/sys/block`.
+- **Archivos**: Contiene información sobre dispositivos, controladores y kernels.
+- **Ejemplos**: `/sys/class`, `/sys/block`.
 
-### **`/tmp` (Temporary)**
+### **`/tmp` (Temporal)**
 
-Contains temporary files.
+Contiene archivos temporales.
 
-- **Files**: Temporary files that can be deleted.
-- **Examples**: Temporary session files, caches.
+- **Archivos**: Archivos temporales que se pueden eliminar.
+- **Ejemplos**: Archivos de sesión temporales, cachés.
 
-### **`/usr` (User)**
+### **`/usr` (Usuario)**
 
-Contains user binaries and read-only data.
+Contiene binarios de usuario y datos de solo lectura.
 
-- **Files**: Secondary hierarchy for user programs and data.
-- **Examples**: `/usr/bin`, `/usr/lib`, `/usr/share`.
+- **Archivos**: Jerarquía secundaria para programas y datos de usuario.
+- **Ejemplos**: `/usr/bin`, `/usr/lib`, `/usr/share`.
 
 ### **`/var` (Variable)**
 
-Contains variable data files.
+Contiene archivos de datos variables.
 
-- **Files**: Files that are expected to grow, such as logs, spool files, and caches.
-- **Examples**: `/var/log`, `/var/spool`, `/var/cache`.
+- **Archivos**: Archivos que se espera que crezcan, como registros, archivos de spool y cachés.
+- **Ejemplos**: `/var/log`, `/var/spool`, `/var/cache`.

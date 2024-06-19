@@ -5,58 +5,58 @@ published: 2024-06-14
 author: "h4rck1"
 category: Linux
 tags: ["linux", "command"]
-hasSpanish: true
+isSpanish: true
 ---
 
 ```bash
-find [path] [options] [expression]
+find [ruta] [opciones] [expresión]
 ```
 
-- **path**: Specifies the path where the search starts. If not provided, the current directory is used.
-- **options**: Modify the behavior of the search.
-- **expression**: Define the search criteria (by name, type, size, etc.).
+- **ruta**: Especifica la ruta donde comienza la búsqueda. Si no se proporciona, se usa el directorio actual.
+- **opciones**: Modifican el comportamiento de la búsqueda.
+- **expresión**: Define los criterios de búsqueda (por nombre, tipo, tamaño, etc.).
 
-### Main options of `find`
+### Opciones principales de `find`
 
 ### **`-name`**
 
-Searches for files and directories by name.
+Busca archivos y directorios por nombre.
 
 ```bash
 
-find /path -name "file.txt"
+find /ruta -name "archivo.txt"
 
 ```
 
 ### **`-iname`**
 
-Searches for files and directories by name, case insensitive.
+Busca archivos y directorios por nombre, sin distinguir entre mayúsculas y minúsculas.
 
 ```bash
 
-find /path -iname "file.txt"
+find /ruta -iname "archivo.txt"
 
 ```
 
 ### **`-type`**
 
-Searches by file type. Common types include:
+Busca por tipo de archivo. Tipos comunes incluyen:
 
-- `f` Regular file
-- `d` Directory
-- `l` Symbolic link
+- `f` Archivo regular
+- `d` Directorio
+- `l` Enlace simbólico
 
 ```bash
 
-find /path -type f
-find /path -type d
-find /path -type l
+find /ruta -type f
+find /ruta -type d
+find /ruta -type l
 
 ```
 
 ### **`-size`**
 
-Searches for files by size. Sizes can be specified in:
+Busca archivos por tamaño. Los tamaños se pueden especificar en:
 
 - `c` bytes
 - `k` kilobytes
@@ -65,63 +65,63 @@ Searches for files by size. Sizes can be specified in:
 
 ```bash
 
-find /path -size +10M  # Files larger than 10 MB
-find /path -size -1G   # Files smaller than 1 GB
+find /ruta -size +10M  # Archivos mayores a 10 MB
+find /ruta -size -1G   # Archivos menores a 1 GB
 
 ```
 
 ### **`-user`**
 
-Searches for files and directories owned by a specific user.
+Busca archivos y directorios propiedad de un usuario específico.
 
 ```bash
 
-find /path -user username
+find /ruta -user nombre_usuario
 
 ```
 
 ### **`-group`**
 
-Searches for files and directories belonging to a specific group.
+Busca archivos y directorios pertenecientes a un grupo específico.
 
 ```bash
 
-find /path -group groupname
+find /ruta -group nombre_grupo
 
 ```
 
 ### **`-perm`**
 
-Searches for files and directories with specific permissions.
+Busca archivos y directorios con permisos específicos.
 
 ```bash
 
-find /path -perm 755  # Files with 755 permissions
-find /path -perm /u+w # Files writable by the user
+find /ruta -perm 755  # Archivos con permisos 755
+find /ruta -perm /u+w # Archivos con permiso de escritura para el usuario
 
 ```
 
 ### **`-mtime` ,`-atime`, `-ctime`**
 
-Searches for files based on modification, access, or status change time.
+Busca archivos basándose en la fecha de modificación, acceso o cambio de estado.
 
-- `mtime` Content modification time.
-- `atime` Access time.
-- `ctime` Metadata change time.
+- `mtime` Fecha de modificación del contenido.
+- `atime` Fecha de acceso.
+- `ctime` Fecha de cambio de metadatos.
 
 ```bash
 
-find /path -mtime -1  # Files modified in the last 24 hours
-find /path -atime +7  # Files accessed more than 7 days ago
+find /ruta -mtime -1  # Archivos modificados en las últimas 24 horas
+find /ruta -atime +7  # Archivos accedidos hace más de 7 días
 
 ```
 
 ### **`exec`**
 
-Executes a command on the found files.
+Ejecuta un comando sobre los archivos encontrados.
 
 ```bash
 
-find /path -name "*.log" -exec rm {} \;  # Deletes found .log files
+find /ruta -name "*.log" -exec rm {} \;  # Elimina los archivos .log encontrados
 
 ```

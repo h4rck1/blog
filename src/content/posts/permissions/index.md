@@ -1,136 +1,135 @@
 ---
-title: Permissions
+title: Permisos
 published: 2024-06-17
-description: "All you need to know about permissions in Linux."
+description: "Los permisos de Linux bien explicados."
 image: "./cover.png"
 imageWidth: "w-3/5"
 tags: [Fundamentals, Permissions]
 category: Linux
+isSpanish: true
 ---
 
-In Linux, file permissions determine who can read, write, or execute a file. These permissions are represented by the characters **`r`**, **`w`**, and **`x`**:
+En Linux, los permisos de archivos determinan quién puede leer, escribir o ejecutar un archivo. Estos permisos están representados por los caracteres **`r`**, **`w`** y **`x`**:
 
-1. **`r`** (read): Permission to read the file.
-2. **`w`** (write): Permission to modify the file.
-3. **`x`** (execute): Permission to execute the file as a program.
+1. **`r`** (read): Permiso para leer el archivo.
+2. **`w`** (write): Permiso para modificar el archivo.
+3. **`x`** (execute): Permiso para ejecutar el archivo como un programa.
 
-### Structure of Permissions: `user`, `group`, `others`
+### Estructura de Permisos: `usuario`, `grupo`, `otros`
 
-File permissions are divided into three sets of three characters, each set representing a different category of users:
+Los permisos de archivos se dividen en tres conjuntos de tres caracteres, cada conjunto representa una categoría diferente de usuarios:
 
-1. **User**: The user who owns the file.
-2. **Group**: The group that owns the file.
-3. **Others**: All other users.
+1. **Usuario**: El usuario que posee el archivo.
+2. **Grupo**: El grupo que posee el archivo.
+3. **Otros**: Todos los demás usuarios.
 
-For example, the permission string `rwxr-xr--` can be broken down as follows:
+Por ejemplo, la cadena de permisos `rwxr-xr--` se puede desglosar de la siguiente manera:
 
-1. **User**: `rwx` (read, write, execute)
-2. **Group**: `r-x` (read, execute)
-3. **Others**: `r--` (read only)
+1. **Usuario**: `rwx` (leer, escribir, ejecutar)
+2. **Grupo**: `r-x` (leer, ejecutar)
+3. **Otros**: `r--` (solo leer)
 
-### Binary and Octal Representation of Permissions
+### Representación Binaria y Octal de Permisos
 
-Each permission character can be represented as a bit in binary, and each set of permissions can be represented as an octal (base-8) number.
+Cada carácter de permiso puede ser representado como un bit en binario, y cada conjunto de permisos puede ser representado como un número octal (base-8).
 
-| Permission | Binary | Octal |
-| ---------- | ------ | ----- |
-| ---        | 000    | 0     |
-| --x        | 001    | 1     |
-| -w-        | 010    | 2     |
-| -wx        | 011    | 3     |
-| r--        | 100    | 4     |
-| r-x        | 101    | 5     |
-| rw-        | 110    | 6     |
-| rwx        | 111    | 7     |
+| Permiso | Binario | Octal |
+| ------- | ------- | ----- |
+| ---     | 000     | 0     |
+| --x     | 001     | 1     |
+| -w-     | 010     | 2     |
+| -wx     | 011     | 3     |
+| r--     | 100     | 4     |
+| r-x     | 101     | 5     |
+| rw-     | 110     | 6     |
+| rwx     | 111     | 7     |
 
-So, `rwxr-xr--` in binary is:
+Así, `rwxr-xr--` en binario es:
 
-1. **User**: `rwx` = 111 = 7
-2. **Group**: `r-x` = 101 = 5
-3. **Others**: `r--` = 100 = 4
+1. **Usuario**: `rwx` = 111 = 7
+2. **Grupo**: `r-x` = 101 = 5
+3. **Otros**: `r--` = 100 = 4
 
-And in octal, `rwxr-xr--` is represented as `754`.
+Y en octal, `rwxr-xr--` se representa como `754`.
 
-## Modifying Permissions
+## Modificación de Permisos
 
-### Using Letters (Symbolic Mode)
+### Usando Letras (Modo Simbólico)
 
-**Add permission:**
+**Agregar permiso:**
 
-- Add execute permission for the user:
+- Agregar permiso de ejecución para el usuario:
+
+  ```bash
+  chmod u+x archivo.txt
+  ```
+
+- Agregar permiso de escritura para el grupo:
 
   ```bash
 
-  chmod u+x file.txt
+  chmod g+w archivo.txt
 
   ```
 
-- Add write permission for the group:
+- Agregar permiso de lectura para otros:
 
   ```bash
 
-  chmod g+w file.txt
+  chmod o+r archivo.txt
 
   ```
 
-- Add read permission for others:
+**Quitar permiso:**
+
+- Quitar permiso de ejecución para el usuario:
 
   ```bash
 
-  chmod o+r file.txt
+  chmod u-x archivo.txt
 
   ```
 
-**Remove permission:**
-
-- Remove execute permission for the user:
+- Quitar permiso de escritura para el grupo:
 
   ```bash
 
-  chmod u-x file.txt
+  chmod g-w archivo.txt
 
   ```
 
-- Remove write permission for the group:
+- Quitar permiso de lectura para otros:
 
   ```bash
 
-  chmod g-w file.txt
+  chmod o-r archivo.txt
 
   ```
 
-- Remove read permission for others:
+**Cambiar permiso:**
+
+- Establecer permisos de lectura y escritura para el usuario, quitar todos los permisos para el grupo y establecer permiso de lectura para otros:
 
   ```bash
 
-  chmod o-r file.txt
+  chmod u=rw,g=,o=r archivo.txt
 
   ```
 
-**Change permission:**
+### Usando Números (Modo Octal)
 
-- Set read and write permissions for the user, remove all permissions for the group, and set read permission for others:
+- Establecer **todos** los permisos para el **usuario**, **lectura** y **ejecución** para el **grupo** y **lectura** y **ejecución** para **otros**:
 
   ```bash
 
-  chmod u=rw,g=,o=r file.txt
+  chmod 755 archivo.txt
 
   ```
 
-### Using Numbers (Octal Mode)
-
-- Set all permissions for the user, read and execute for the group and read and execute for others.
+- Establecer **lectura** y **escritura** para el usuario, quitar **todos** los permisos para el **grupo** y establecer permiso de **lectura** para **otros**:
 
   ```bash
 
-  chmod 755 file.txt
-
-  ```
-
-- Set **read** and **write** permissions for the user, remove **all** permissions for the **group**, and set **read** permission for **others.**
-
-  ```bash
-
-  chmod 604 file.txt
+  chmod 604 archivo.txt
 
   ```

@@ -1,153 +1,154 @@
 ---
 title: "Awk"
-description: "An advanced guide about awk command in linux"
+description: "Una guía avanzada del comando awk en Linux"
 published: 2024-06-14
 author: "h4rck1"
 category: Linux
 tags: ["linux", "command"]
-hasSpanish: true
+isSpanish: true
 ---
 
 ```bash
-awk 'pattern {action}' file
+awk 'patrón {acción}' [archivo]
 ```
 
-- **pattern**: The condition to match.
-- **action**: The operation to perform when the pattern matches.
+- **patrón**: La condición a cumplir.
+- **acción**: La operación a realizar cuando el patrón coincide.
+- **archivo**: Los archivos en los que quieres buscar.
 
-### Built-in Variables
+### Variables
 
-- **`$0`**: Represents the entire current line.
-- **`$1, $2, ...`**: Represents the first, second, etc., fields in the current line.
-- **`NF`**: Number of fields in the current record.
-- **`NR`**: Number of the current record (line number).
-- **`FS`**: Field separator (default is space or tab).
-- **`OFS`**: Output field separator.
-- **`RS`**: Record separator (default is newline).
-- **`ORS`**: Output record separator.
+- **`$0`** Representa toda la línea actual.
+- **`$1, $2, ...`**: Representa el primer, segundo, etc., campos en la línea actual.
+- **`NF`** Número de campos en el registro actual.
+- **`NR`** Número del registro actual (número de línea).
+- **`FS`** Separador de campos (por defecto es espacio o tabulación).
+- **`OFS`** Separador de campos de salida.
+- **`RS`** Separador de registros (por defecto es nueva línea).
+- **`ORS`** Separador de registros de salida.
 
-### Printing specific columns
+### Imprimir columnas específicas
 
-Use **`awk`** to extract specific fields or columns from text files, such as log files or command outputs.
+Usa `awk` para extraer campos o columnas específicas de archivos de texto, como archivos de registro o salidas de comandos.
 
 ```bash
 
-awk '{print $1, $3, $NF}' file.txt
+awk '{print $1, $3, $NF}' archivo.txt
 
 ```
 
-### Print lines where the last field matches a pattern
+### Imprimir líneas donde el último campo coincide con un patrón
 
-To print lines where the last field matches a specific pattern.
+Para imprimir líneas donde el último campo coincide con un patrón específico.
 
 ```bash
 
-awk '$NF ~ /pattern/' file.txt
+awk '$NF ~ /patrón/' archivo.txt
 
 ```
 
-### Print the second-to-last field
+### Imprimir el penúltimo campo
 
-To print the second-to-last field of each line, you can use `$(NF-1)`.
+Para imprimir el penúltimo campo de cada línea, puedes usar `$(NF-1)`.
 
 ```bash
 
-awk '{print $(NF-1)}' file.txt
+awk '{print $(NF-1)}' archivo.txt
 
 ```
 
-### Filtering rows based on a condition
+### Filtrar filas basadas en una condición
 
-**`awk`** can be used to filter rows that meet certain conditions, such as rows containing specific text.
+`awk` se puede usar para filtrar filas que cumplen ciertas condiciones, como filas que contienen texto específico.
 
 ```bash
 
-awk '/pattern/ {print $0}' file.txt
+awk '/patrón/ {print $0}' archivo.txt
 
 ```
 
-### Processing log files
+### Procesar Archivos de Registro
 
-Use **`awk`** to process log files and extract meaningful information.
+Usa `awk` para procesar archivos de registro y extraer información significativa.
 
 ```bash
 
-awk '$3 == "ERROR" {print $0}' logfile.txt
+awk '$3 == "ERROR" {print $0}' logarchivo.txt
 
 ```
 
-> This command prints all lines where the third column is "ERROR".
+> Este comando imprime todas las líneas donde la tercera columna es "ERROR".
 
-### Calculating statistics
+### Calcular estadísticas
 
-`awk` can perform calculations, making it useful for generating statistics from data.
+`awk` puede realizar cálculos, lo que lo hace útil para generar estadísticas a partir de datos.
 
 ```bash
 
-awk '{sum += $1} END {print sum}' numbers.txt
+awk '{sum += $1} END {print sum}' numberos.txt
 
 ```
 
-> This command sums up the values in the first column of `numbers.txt` and prints the total.
+> Este comando suma los valores en la primera columna de `numeros.txt` e imprime el total.
 
-## Less common but very useful uses
+## Usos menos comunes pero muy útiles
 
-### Replacing text in a file
+### Reemplazar texto en un archivo
 
-**`awk`** can be used to replace text in a file.
+`awk` se puede usar para reemplazar texto en un archivo.
 
 ```bash
 
-awk '{gsub(/oldtext/, "newtext"); print}' file.txt
+awk '{gsub(/texto_antiguo/, "texto_nuevo"); print}' archivo.txt
 
 ```
 
-> This command replaces all occurrences of "oldtext" with "newtext" in `file.txt`.
+> Este comando reemplaza todas las ocurrencias de "texto_antiguo" con "texto_nuevo" en `archivo.txt`.
 
-### Field separator
+### Separador de campos
 
-**`awk`** can handle different field separators, not just spaces or tabs.
+`awk` puede manejar diferentes separadores de campos, no solo espacios o tabulaciones.
 
 ```bash
 
-awk -F',' '{print $1, $2}' file.csv
+awk -F',' '{print $1, $2}' archivo.csv
 
 ```
 
-> This command uses a comma as the field separator and prints the first and second columns of a CSV file.
+> Este comando usa una coma como separador de campos e imprime la primera y segunda columnas de un archivo CSV.
 
-### Complex conditional statements
+### Declaraciones condicionales complejas
 
-**`awk`** can use complex conditional statements for more sophisticated data processing.
+`awk` puede usar declaraciones condicionales complejas para un procesamiento de datos más sofisticado.
 
 ```bash
 
-awk '{if ($1 > 100 && $2 < 50) print $0}' file.txt
+awk '{if ($1 > 100 && $2 < 50) print $0}' archivo.txt
 
 ```
 
-> This command prints lines where the first column is greater than 100 and the second column is less than 50.
+> Este comando imprime líneas donde la primera columna es mayor que 100 y la segunda columna es menor que 50.
 
-### Formatted Output
+### Salida con formato
 
-**`awk`** can format the output in a structured way.
+`awk` puede formatear la salida de manera estructurada.
 
 ```bash
 
-awk '{printf "Name: %s, Age: %d\n", $1, $2}' file.txt
+awk '{printf "Nombre: %s, Edad: %d\n", $1, $2}' archivo.txt
 
 ```
 
-> This command prints the first and second columns in a formatted way.
+> Este comando imprime la primera y segunda columnas de manera formateada.
 
-### Working with Arrays
+### Trabajar con Arreglos
 
-**`awk`** supports arrays, which can be useful for more advanced text processing.
+`awk` soporta arreglos, lo cual puede ser útil para un procesamiento de texto más avanzado.
 
 ```bash
 
-awk '{arr[$1]++} END {for (i in arr) print i, arr[i]}' file.txt
+awk '{arr[$1]++} END {for (i in arr) print i, arr[i]}' archivo.txt
 
 ```
 
-> This command counts the occurrences of each unique value in the first column and prints the results.
+> Este comando cuenta las ocurrencias de cada valor único en la primera columna e imprime los resultados.

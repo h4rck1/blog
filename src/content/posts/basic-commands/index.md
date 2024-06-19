@@ -1,375 +1,370 @@
 ---
-title: Linux Basic Commands
+title: Comandos Básicos de Linux
 published: 2024-06-14
-description: Basic commands for linux you need to now.
+description: Comandos básicos de Linux que deberías saber.
 tags: [Fundamentals, Commands]
 category: Linux
-draft: false
+isSpanish: true
 ---
 
-## Navigation and Directory Management
+## Navegación y Gestión de Directorios
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>cd</code></td>
         <td>
-            Changes the current directory.
+            Cambia el directorio actual.
         </td>
     </tr>
     <tr>
         <td><code>ls</code></td>
         <td>
-            Shows all content details from a directory or file. </br>
-	        <code>-a</code> Show hidden files (dot files)</br>
-            <code>-l</code> Readable list</br>
-	        <code>-i</code> Show index
+            Muestra todos los detalles del contenido de un directorio o archivo. </br>
+            <code>-a</code> Mostrar archivos ocultos (archivos con punto)</br>
+            <code>-l</code> Lista legible</br>
+            <code>-i</code> Mostrar índice
         </td>
     </tr>
+    <tr>
         <td><code>pwd</code></td>
         <td>
-            Shows current directory.
+            Muestra el directorio actual.
         </td>
     </tr>
     <tr>
         <td><code>mkdir</code></td>
         <td>
-           Creates a directory.
+            Crea un directorio.
         </td>
     </tr>
     <tr>
         <td><code>mktemp</code></td>
         <td>
-            Creates a temporary file or directory. </br>
-	        <code>-d</code> Create directories</br>
+            Crea un archivo o directorio temporal. </br>
+            <code>-d</code> Crear directorios
         </td>
     </tr>
     <tr>
         <td><code>tree</code></td>
         <td>
-            Displays a directory and file structure in a tree format.
+            Muestra la estructura de directorios y archivos en formato de árbol.
         </td>
     </tr>
 </table>
 
-## File Management
+## Gestión de Archivos
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>touch</code></td>
         <td>
-            Creates a new file.
+            Crea un nuevo archivo.
         </td>
     </tr>
     <tr>
         <td><code>cp</code></td>
         <td>
-            Copies a file.
+            Copia un archivo.
         </td>
     </tr>
     <tr>
         <td><code>mv</code></td>
         <td>
-            Moves or renames a file.
+            Mueve o renombra un archivo.
         </td>
     </tr>
     <tr>
         <td><code>rm</code></td>
         <td>
-            Deletes files or directories</br>
-	        <code>-r</code> Delete directory recursively.</br>
+            Elimina archivos o directorios</br>
+            <code>-r</code> Eliminar directorio de forma recursiva.
         </td>
     </tr>
     <tr>
         <td><code>ln</code></td>
         <td>
-            Creates hard links and symlinks between files.
+            Crea enlaces duros y simbólicos entre archivos.
         </td>
     </tr>
     <tr>
         <td><code>head</code></td>
         <td>
-            Displays the first lines of a file.
+            Muestra las primeras líneas de un archivo.
         </td>
     </tr>
     <tr>
         <td><code>tail</code></td>
         <td>
-            Displays the last lines of a file.
+            Muestra las últimas líneas de un archivo.
         </td>
     </tr>
     <tr>
         <td><code>df</code></td>
         <td>
-            Shows disk space usage of file systems.
+            Muestra el uso del espacio en disco de los sistemas de archivos.
         </td>
     </tr>
     <tr>
         <td><code>du</code></td>
         <td>
-            Shows disk space usage of files and directories.
+            Muestra el uso del espacio en disco de archivos y directorios.
         </td>
     </tr>
 </table>
 
-## File Editing and Viewing
+## Edición y Visualización de Archivos
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>cat</code></td>
         <td>
-            Shows file content.
+            Muestra el contenido de un archivo.
         </td>
     </tr>
     <tr>
         <td><code>nano</code></td>
         <td>
-            Opens a file with a basic text editor.
+            Abre un archivo con un editor de texto básico.
         </td>
     </tr>
     <tr>
         <td><code>less</code></td>
         <td>
-            Displays file content with pagination.
+            Muestra el contenido de un archivo con paginación.
         </td>
     </tr>
     <tr>
         <td><code>more</code></td>
         <td>
-           Similar to less, displays file content with pagination.
-	    </td>
+            Similar a less, muestra el contenido de un archivo con paginación.
+        </td>
     </tr>
     <tr>
         <td><code>echo</code></td>
         <td>
-            Prints to the terminal.
+            Imprime en la terminal.
         </td>
     </tr>
 </table>
 
-## Permissions and Ownership
+## Permisos y Propiedad
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>chmod</code></td>
         <td>
-            Shows file content.
+            Cambia los permisos de un archivo.
         </td>
     </tr>
     <tr>
         <td><code>chown</code></td>
         <td>
-            Changes permissions.
+            Cambia el propietario de un archivo.
         </td>
     </tr>
     <tr>
         <td><code>umask</code></td>
         <td>
-            Changes owner.
+            Establece la máscara de permisos de creación de archivos por defecto.
         </td>
-    </tr>
-    <tr>
-        <td><code>more</code></td>
-        <td>
-           Sets the default file creation permissions mask.
-	    </td>
     </tr>
 </table>
 
-## Search and Location
+## Búsqueda y Localización
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>find</code></td>
         <td>
-            Finds something in a path.
+            Encuentra algo en una ruta.
         </td>
     </tr>
     <tr>
         <td><code>locate</code></td>
         <td>
-            Finds something through the database.
+            Encuentra algo a través de la base de datos.
         </td>
     </tr>
     <tr>
         <td><code>updatedb</code></td>
         <td>
-            Updates the local database for locate.
+            Actualiza la base de datos local para locate.
         </td>
     </tr>
     <tr>
         <td><code>which</code></td>
         <td>
-           Shows the full path of a command.
-	    </td>
+            Muestra la ruta completa de un comando.
+        </td>
     </tr>
 </table>
 
-## System and User Information
+## Información del Sistema y del Usuario
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>id</code></td>
         <td>
-            Shows the user ID and all the groups the user belongs to.
+            Muestra el ID del usuario y todos los grupos a los que pertenece.
         </td>
     </tr>
     <tr>
         <td><code>uname</code></td>
         <td>
-            Shows machine information.
+            Muestra información de la máquina.
         </td>
     </tr>
     <tr>
         <td><code>whoami</code></td>
         <td>
-            Shows current user.
+            Muestra el usuario actual.
         </td>
     </tr>
     <tr>
         <td><code>date</code></td>
         <td>
-           Displays the current date and time.
-	    </td>
+            Muestra la fecha y hora actual.
+        </td>
     </tr>
     <tr>
         <td><code>uptime</code></td>
         <td>
-            Shows how long the system has been running.
-	    </td>
+            Muestra cuánto tiempo ha estado en funcionamiento el sistema.
+        </td>
     </tr>
     <tr>
         <td><code>hostname</code></td>
         <td>
-           Shows or sets the system's hostname.
-	    </td>
+            Muestra o establece el nombre de host del sistema.
+        </td>
     </tr>
 </table>
 
-## Process Management and Administration
+## Gestión de Procesos y Administración
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>ps</code></td>
         <td>
-            Shows the running processes.
+            Muestra los procesos en ejecución.
         </td>
     </tr>
     <tr>
         <td><code>top</code></td>
         <td>
-            Displays a real-time list of running processes.
+            Muestra una lista en tiempo real de los procesos en ejecución.
         </td>
     </tr>
     <tr>
         <td><code>htop</code></td>
         <td>
-            Similar to top, but with an interactive and user-friendly interface.
+            Similar a top, pero con una interfaz interactiva y fácil de usar.
         </td>
     </tr>
     <tr>
         <td><code>kill</code></td>
         <td>
-           Kills a running process.
-	    </td>
-    </tr>
-</table>
-
-## Network Commands
-
-<table>
-    <tr>
-        <th>Command</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><code>ifconfig</code></td>
-        <td>
-            Shows network interfaces and IP addresses.
+            Mata un proceso en ejecución.
         </td>
     </tr>
 </table>
 
-## Others
+## Comandos de Red
 
 <table>
     <tr>
-        <th>Command</th>
-        <th>Description</th>
+        <th>Comando</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td><code>ifconfig</code></td>
+        <td>
+            Muestra las interfaces de red y las direcciones IP.
+        </td>
+    </tr>
+</table>
+
+## Otros
+
+<table>
+    <tr>
+        <th>Comando</th>
+        <th>Descripción</th>
     </tr>
     <tr>
         <td><code>awk</code></td>
         <td>
-           Performs different operations with text.
+            Realiza diferentes operaciones con texto.
         </td>
     </tr>
     <tr>
         <td><code>grep</code></td>
         <td>
-           Filters results.
+            Filtra resultados.
         </td>
     </tr>
     <tr>
         <td><code>xargs</code></td>
         <td>
-            Grabs the output
+            Captura la salida.
         </td>
     </tr>
     <tr>
         <td><code>alias</code></td>
         <td>
-            Create command aliases.
+            Crea alias de comandos.
         </td>
     </tr>
     <tr>
         <td><code>history</code></td>
         <td>
-           Show command history.
-	    </td>
+            Muestra el historial de comandos.
+        </td>
     </tr>
-  <tr>
+    <tr>
         <td><code>clear</code></td>
         <td>
-           Clears the terminal screen.
-	    </td>
+            Limpia la pantalla de la terminal.
+        </td>
     </tr>
     <tr>
         <td><code>su</code></td>
         <td>
-           Changes user.
-	    </td>
+            Cambia de usuario.
+        </td>
     </tr>
     <tr>
         <td><code>man</code></td>
         <td>
-           Shows manual pages for commands.
-	    </td>
+            Muestra las páginas del manual de comandos.
+        </td>
     </tr>
 </table>
