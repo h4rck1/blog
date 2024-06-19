@@ -58,12 +58,13 @@ export function getStoredTheme(): LIGHT_DARK_MODE {
 }
 
 export function setLanguage(lang: LANGUAGE): void {
-  localStorage.setItem('language', lang)
-  alert(`Language is: ${lang}`)
-}
+  if (lang === siteConfig.lang) return
 
-export function getStoredLanguage(): LANGUAGE {
-  return (localStorage?.getItem('language') as LANGUAGE) || 'en'
+  if (lang === ES_es) {
+    location.href = `https://h4rck1-cybersecurity-${lang}.netlify.app/`
+  } else {
+    location.href = 'https://h4rck1-cybersecurity.netlify.app/'
+  }
 }
 
 export async function setLanguageAPI(newLang: LANGUAGE) {
