@@ -33,6 +33,10 @@ export default defineConfig({
   site: 'https://h4rck1.vercel.app/',
   base: '/',
   trailingSlash: 'always',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['es', 'en'],
+  },
   integrations: [
     tailwind(),
     swup({

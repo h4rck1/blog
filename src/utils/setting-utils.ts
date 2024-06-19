@@ -1,4 +1,4 @@
-import type { LIGHT_DARK_MODE } from '@/types/config'
+import type { LANGUAGE, LIGHT_DARK_MODE } from '@/types/config'
 import {
   AUTO_MODE,
   DARK_MODE,
@@ -34,6 +34,7 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
     case DARK_MODE:
       document.documentElement.classList.add('dark')
       break
+
     case AUTO_MODE:
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.classList.add('dark')
@@ -44,6 +45,8 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
   }
 }
 
+function setLanguageInConfig(lang: LANGUAGE) {}
+
 export function setTheme(theme: LIGHT_DARK_MODE): void {
   localStorage.setItem('theme', theme)
   applyThemeToDocument(theme)
@@ -51,4 +54,13 @@ export function setTheme(theme: LIGHT_DARK_MODE): void {
 
 export function getStoredTheme(): LIGHT_DARK_MODE {
   return (localStorage.getItem('theme') as LIGHT_DARK_MODE) || DEFAULT_THEME
+}
+
+export function setLanguage(lang: LANGUAGE): void {
+  localStorage.setItem('language', lang)
+  location.reload()
+}
+
+export function getStoredLanguage(): LANGUAGE {
+  return localStorage.getItem('language') as LANGUAGE
 }
