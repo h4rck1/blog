@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte"
   import { url } from "@utils/url-utils.ts"
+  import { i18n } from "@i18n/translation"
+  import I18nKey from "@i18n/i18nKey"
   let keywordDesktop = ""
   let keywordMobile = ""
   let result: any[] = []
@@ -8,18 +10,18 @@
     {
       url: url("/"),
       meta: {
-        title: "This Is a Fake Search Result"
+        title: "This Is a Fake Search Result",
       },
       excerpt:
-        "Because the search cannot work in the <mark>dev</mark> environment."
+        "Because the search cannot work in the <mark>dev</mark> environment.",
     },
     {
       url: url("/"),
       meta: {
-        title: "If You Want to Test the Search"
+        title: "If You Want to Test the Search",
       },
-      excerpt: "Try running <mark>npm build && npm preview</mark> instead."
-    }
+      excerpt: "Try running <mark>npm build && npm preview</mark> instead.",
+    },
   ]
 
   let search = (keyword: string, isDesktop: boolean) => {}
@@ -77,7 +79,7 @@
 >
   <slot name="search-icon"></slot>
   <input
-    placeholder="Search"
+    placeholder={i18n("search")}
     bind:value={keywordDesktop}
     on:focus={() => search(keywordDesktop, true)}
     class="transition-all pl-10 text-sm bg-transparent outline-0

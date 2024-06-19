@@ -34,4 +34,15 @@ export const es: Translation = {
   [Key.author]: 'Autor',
   [Key.publishedAt]: 'Publicado el',
   [Key.license]: 'Licencia',
+
+  [Key.search]: 'Buscar',
+
+  //Tags
+  [Key.commands]: 'Comandos',
+  [Key.fundamentals]: 'Fundamentos',
+  [Key.hierarchy]: 'Jerarquía',
+  [Key.other]: 'Otros',
+  [Key.permissions]: 'Permisos',
+  [Key.redirectors]: 'Redirectores',
+  [Key.regex]: 'RegEx',
 }

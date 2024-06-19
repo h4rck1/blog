@@ -92,6 +92,8 @@ export async function setLanguageAPI(newLang: LANGUAGE) {
   }
 
   function languageRedirect(lang: LANGUAGE) {
+    if (lang === siteConfig.lang) return
+
     if (
       !window.location.href.includes('posts') &&
       !window.location.href.includes('commands')
