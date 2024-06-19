@@ -2,14 +2,16 @@
   import { i18n } from "@i18n/translation"
   import I18nKey from "@i18n/i18nKey"
   import Icon from "@iconify/svelte"
-</script>
 
-<!-- <div
-  id="display-lang"
-  class="float-panel float-panel-closed absolute transition-all w-80 right-4 px-4 py-4"
->
-  Que onda riot!
-</div> -->
+  import { getStoredLanguage, setLanguage } from "@utils/setting-utils.ts"
+  import type { LANGUAGE } from "@/types/config"
+  import { EN_en, ES_es } from "@constants/constants"
+
+  function swichLang(lang: LANGUAGE) {
+    console.log("Changing language to: ", lang)
+    setLanguage(lang)
+  }
+</script>
 
 <div
   id="display-lang"
@@ -18,11 +20,13 @@
   <div class="card-base float-panel p-2">
     <button
       class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium mb-0.5"
+      on:click={() => swichLang(EN_en)}
     >
       English
     </button>
     <button
       class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium mb-0.5"
+      on:click={() => swichLang(ES_es)}
     >
       Español
     </button>

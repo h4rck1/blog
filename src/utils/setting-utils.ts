@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config'
 import type { LANGUAGE, LIGHT_DARK_MODE } from '@/types/config'
 import {
   AUTO_MODE,
@@ -45,7 +46,9 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
   }
 }
 
-function setLanguageInConfig(lang: LANGUAGE) {}
+function setLanguageInConfig(lang: LANGUAGE) {
+  location.href = '/commands/find/es/'
+}
 
 export function setTheme(theme: LIGHT_DARK_MODE): void {
   localStorage.setItem('theme', theme)
@@ -58,7 +61,7 @@ export function getStoredTheme(): LIGHT_DARK_MODE {
 
 export function setLanguage(lang: LANGUAGE): void {
   localStorage.setItem('language', lang)
-  location.reload()
+  setLanguageInConfig(lang)
 }
 
 export function getStoredLanguage(): LANGUAGE {
