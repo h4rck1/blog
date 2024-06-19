@@ -1,13 +1,7 @@
 <script lang="ts">
   import { i18n } from "@i18n/translation"
   import I18nKey from "@i18n/i18nKey"
-  import Icon from "@iconify/svelte"
-
-  import {
-    getStoredLanguage,
-    setLanguage,
-    setLanguageAPI,
-  } from "@utils/setting-utils.ts"
+  import { setLanguageAPI } from "@utils/setting-utils"
   import type { LANGUAGE } from "@/types/config"
   import { EN_en, ES_es } from "@constants/constants"
 

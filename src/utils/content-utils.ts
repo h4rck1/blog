@@ -35,7 +35,7 @@ export async function getSortedPosts() {
   return getSortedCollectionByLanguage('posts', data => {
     if (siteConfig.lang === ES_es) return data.isSpanish
 
-    return true
+    return !data.isSpanish
   })
 }
 

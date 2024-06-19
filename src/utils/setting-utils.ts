@@ -4,6 +4,8 @@ import {
   AUTO_MODE,
   DARK_MODE,
   DEFAULT_THEME,
+  EN_en,
+  ES_es,
   LIGHT_MODE,
 } from '@constants/constants.ts'
 
@@ -81,11 +83,27 @@ export async function setLanguageAPI(newLang: LANGUAGE) {
 
   const result = await response.json()
   if (result.success) {
-    window.location.reload()
+    languageRedirect(newLang)
   } else {
     console.error(
       'Error while trying to change language:',
       result.completeError,
     )
+  }
+
+  function languageRedirect(lang: LANGUAGE) {
+    if (!window.location.href.includes('posts')) {
+      window.location.reload()
+      return
+    }
+
+    if (lang === EN_en) {
+      const newLocation = location.href.split('es/')[0]
+      window.location.href = newLocation
+      return
+    }
+
+    const newLocation = `${location.href}es/`
+    window.location.href = newLocation
   }
 }
