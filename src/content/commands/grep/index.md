@@ -20,7 +20,7 @@ cat [file] | grep [options] pattern
 - **pattern**: The text or regular expression you want to search for.
 - **file**: The files in which you want to search. If not specified, `grep` searches in the standard input.
 
-### Main Options of `grep`
+### Main options of `grep`
 
 ### `-i`
 
@@ -35,6 +35,14 @@ grep -i "pattern" file.txt
 ### **`-v`**
 
 Inverts the match, showing lines that do not contain the pattern.
+
+```bash
+
+grep -v "pattern" file.txt
+
+```
+
+### **`-r`**
 
 Searches recursively in directories.
 

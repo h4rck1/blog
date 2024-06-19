@@ -1,7 +1,7 @@
 ---
 title: Árbol de Directorios
 published: 2024-06-14
-description: "Una breve descripción de la estructura jerárquica multinivel en Unix"
+description: "Una breve descripción de la estructura jerárquica multinivel en Unix."
 image: "./cover.png"
 tags: [Fundamentals, Hierarchy]
 category: Linux

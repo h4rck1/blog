@@ -92,7 +92,10 @@ export async function setLanguageAPI(newLang: LANGUAGE) {
   }
 
   function languageRedirect(lang: LANGUAGE) {
-    if (!window.location.href.includes('posts')) {
+    if (
+      !window.location.href.includes('posts') &&
+      !window.location.href.includes('commands')
+    ) {
       window.location.reload()
       return
     }

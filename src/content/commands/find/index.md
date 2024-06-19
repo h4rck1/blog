@@ -16,7 +16,7 @@ find [path] [options] [expression]
 - **options**: Modify the behavior of the search.
 - **expression**: Define the search criteria (by name, type, size, etc.).
 
-### Main Options of `find`
+### Main options of `find`
 
 ### **`-name`**
 
@@ -42,9 +42,9 @@ find /path -iname "file.txt"
 
 Searches by file type. Common types include:
 
-- `f`: Regular file
-- `d`: Directory
-- `l`: Symbolic link
+- `f` Regular file
+- `d` Directory
+- `l` Symbolic link
 
 ```bash
 
@@ -58,10 +58,10 @@ find /path -type l
 
 Searches for files by size. Sizes can be specified in:
 
-- `c`: bytes
-- `k`: kilobytes
-- `M`: megabytes
-- `G`: gigabytes
+- `c` bytes
+- `k` kilobytes
+- `M` megabytes
+- `G` gigabytes
 
 ```bash
 
@@ -105,9 +105,9 @@ find /path -perm /u+w # Files writable by the user
 
 Searches for files based on modification, access, or status change time.
 
-- `mtime`: Content modification time.
-- `atime`: Access time.
-- `ctime`: Metadata change time.
+- `mtime` Content modification time.
+- `atime` Access time.
+- `ctime` Metadata change time.
 
 ```bash
 
