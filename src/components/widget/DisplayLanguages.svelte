@@ -1,12 +1,12 @@
 <script lang="ts">
   import { i18n } from "@i18n/translation"
   import I18nKey from "@i18n/i18nKey"
-  import { setLanguageAPI } from "@utils/setting-utils"
+  import { setLanguage } from "@utils/setting-utils"
   import type { LANGUAGE } from "@/types/config"
   import { EN_en, ES_es } from "@constants/constants"
 
   async function swichLang(lang: LANGUAGE) {
-    await setLanguageAPI(lang)
+    await setLanguage(lang)
   }
 </script>
 

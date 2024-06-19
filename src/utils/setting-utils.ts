@@ -48,10 +48,6 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
   }
 }
 
-function setLanguageInConfig(lang: LANGUAGE) {
-  location.href = '/commands/find/es/'
-}
-
 export function setTheme(theme: LIGHT_DARK_MODE): void {
   localStorage.setItem('theme', theme)
   applyThemeToDocument(theme)
@@ -63,7 +59,7 @@ export function getStoredTheme(): LIGHT_DARK_MODE {
 
 export function setLanguage(lang: LANGUAGE): void {
   localStorage.setItem('language', lang)
-  setLanguageInConfig(lang)
+  alert(`Language is: ${lang}`)
 }
 
 export function getStoredLanguage(): LANGUAGE {
