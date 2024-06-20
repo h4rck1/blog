@@ -26,6 +26,8 @@ if (isLocal) {
     img = await (files[normalizedPath])();
 }
 
+console.log('img', img)
+
 const imageClass = 'w-full h-full object-cover';
 const imageStyle = `object-position: ${position}`
 ---
