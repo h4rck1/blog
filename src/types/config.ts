@@ -56,6 +56,10 @@ export type ProfileConfig = {
     url: string
     icon: string
   }[]
+  quotes: {
+    en: string[]
+    es: string[]
+  }
 }
 
 export type LicenseConfig = {
