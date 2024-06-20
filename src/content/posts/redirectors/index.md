@@ -29,6 +29,7 @@ It is commonly used to refer to standard data streams in Unix or Linux systems.
 Redirects the standard output of a command to a file. If the file exists, it is overwritten.
 
 ```bash
+
 ls > filelist.txt
 ```
 
@@ -39,6 +40,7 @@ ls > filelist.txt
 Redirects the standard output of a command to a file, appending the output to the end of the file if it already exists.
 
 ```bash
+
 echo "New line" >> filelist.txt
 ```
 
@@ -49,6 +51,7 @@ echo "New line" >> filelist.txt
 Redirects the standard error output of a command to a file.
 
 ```bash
+
 ls non_existent_file 2> errorlog.txt
 ```
 
@@ -59,6 +62,7 @@ ls non_existent_file 2> errorlog.txt
 Redirects both the standard output and the standard error output to a file.
 
 ```bash
+
 ls existing_file non_existent_file &> outputlog.txt
 ```
 
@@ -69,6 +73,7 @@ ls existing_file non_existent_file &> outputlog.txt
 Redirects the standard input of a command from a file.
 
 ```bash
+
 wc -l < filelist.txt
 ```
 
@@ -77,6 +82,7 @@ wc -l < filelist.txt
 ### Redirecting Standard Output and Standard Error Separately
 
 ```bash
+
 ls existing_file non_existent_file > output.txt 2> error.txt
 ```
 
@@ -85,6 +91,7 @@ ls existing_file non_existent_file > output.txt 2> error.txt
 ### Redirecting Standard Output and Standard Error to the Same File
 
 ```bash
+
 ls existing_file non_existent_file > combined.txt 2>&1
 ```
 
@@ -95,6 +102,7 @@ ls existing_file non_existent_file > combined.txt 2>&1
 Combining pipes `|` with redirection to process data between multiple commands.
 
 ```bash
+
 ls | grep "pattern" > result.txt
 ```
 
@@ -103,6 +111,7 @@ ls | grep "pattern" > result.txt
 ### Reading from a File and Redirecting Output
 
 ```bash
+
 sort < unsorted_list.txt > sorted_list.txt
 ```
 
@@ -111,6 +120,7 @@ sort < unsorted_list.txt > sorted_list.txt
 ### Redirecting STDERR to STDOUT
 
 ```bash
+
 command 2>&1 | tee output_and_error.txt
 ```
 
@@ -123,6 +133,7 @@ command 2>&1 | tee output_and_error.txt
 Redirect the error output to `/dev/null` to ignore it.
 
 ```bash
+
 ls non_existent_file 2> /dev/null
 ```
 
@@ -131,6 +142,7 @@ ls non_existent_file 2> /dev/null
 ### Combining Multiple Commands with Different Redirections
 
 ```bash
+
 command1 > output.txt 2>&1 | command2 2> error_only.txt
 ```
 

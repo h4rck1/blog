@@ -62,7 +62,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod u+x file.txt
-
   ```
 
 - Add write permission for the group:
@@ -70,7 +69,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod g+w file.txt
-
   ```
 
 - Add read permission for others:
@@ -78,7 +76,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod o+r file.txt
-
   ```
 
 **Remove permission:**
@@ -88,7 +85,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod u-x file.txt
-
   ```
 
 - Remove write permission for the group:
@@ -96,7 +92,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod g-w file.txt
-
   ```
 
 - Remove read permission for others:
@@ -104,7 +99,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod o-r file.txt
-
   ```
 
 **Change permission:**
@@ -114,7 +108,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod u=rw,g=,o=r file.txt
-
   ```
 
 ### Using Numbers (Octal Mode)
@@ -124,7 +117,6 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod 755 file.txt
-
   ```
 
 - Set **read** and **write** permissions for the user, remove **all** permissions for the **group**, and set **read** permission for **others.**
@@ -132,5 +124,4 @@ And in octal, `rwxr-xr--` is represented as `754`.
   ```bash
 
   chmod 604 file.txt
-
   ```

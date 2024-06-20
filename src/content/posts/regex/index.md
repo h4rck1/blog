@@ -37,6 +37,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches the exact characters in the text.
 
    ```bash
+
    grep "abc" file.txt
    ```
 
@@ -47,6 +48,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches any single character except a newline.
 
    ```bash
+
    grep "a.c" file.txt
    ```
 
@@ -57,6 +59,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches zero or more occurrences of the preceding element.
 
    ```bash
+
    grep "ab*c" file.txt
    ```
 
@@ -67,6 +70,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches one or more occurrences of the preceding element.
 
    ```bash
+
    grep "ab+c" file.txt
    ```
 
@@ -77,6 +81,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches zero or one occurrence of the preceding element.
 
    ```bash
+
    grep "ab?c" file.txt
    ```
 
@@ -87,6 +92,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches the start of a line.
 
    ```bash
+
    grep "^abc" file.txt
    ```
 
@@ -97,6 +103,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches the end of a line.
 
    ```bash
+
    grep "abc$" file.txt
    ```
 
@@ -107,6 +114,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches any single character within the brackets.
 
    ```bash
+
    grep "[aeiou]" file.txt
    ```
 
@@ -117,6 +125,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Matches any single character not within the brackets.
 
    ```bash
+
    grep "[^aeiou]" file.txt
    ```
 
@@ -127,6 +136,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
     Matches either the pattern before or the pattern after the `|`.
 
     ```bash
+
     grep "abc\|def" file.txt
     ```
 
@@ -137,6 +147,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
     Groups multiple tokens together and remembers the matched text.
 
     ```bash
+
     grep "\(abc\)\{2,\}" file.txt
     ```
 
@@ -147,6 +158,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
     Escapes a metacharacter to be used as a literal.
 
     ```bash
+
     grep "a\.c" file.txt
     ```
 
@@ -159,6 +171,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Use `\b` to match word boundaries.
 
    ```bash
+
    grep "\bword\b" file.txt
    ```
 
@@ -169,6 +182,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Use `\d` to match any digit.
 
    ```bash
+
    grep "\d" file.txt
    ```
 
@@ -179,6 +193,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Use `\D` to match any non-digit.
 
    ```bash
+
    grep "\D" file.txt
    ```
 
@@ -189,6 +204,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Use `\s` to match any whitespace character.
 
    ```bash
+
    grep "\s" file.txt
    ```
 
@@ -199,6 +215,7 @@ Regular expressions `RegEx` are powerful tools used for pattern matching and tex
    Use `\S` to match any non-whitespace character.
 
    ```bash
+
    grep "\S" file.txt
    ```
 
