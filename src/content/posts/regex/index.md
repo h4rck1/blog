@@ -36,6 +36,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con los caracteres exactos en el texto.
 
    ```bash
+
    grep "abc" archivo.txt
    ```
 
@@ -46,6 +47,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con cualquier carácter excepto un salto de línea.
 
    ```bash
+
    grep "a.c" archivo.txt
    ```
 
@@ -56,6 +58,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con cero o más ocurrencias del elemento anterior.
 
    ```bash
+
    grep "ab*c" archivo.txt
    ```
 
@@ -66,6 +69,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con una o más ocurrencias del elemento anterior.
 
    ```bash
+
    grep "ab+c" archivo.txt
    ```
 
@@ -76,6 +80,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con cero o una ocurrencia del elemento anterior.
 
    ```bash
+
    grep "ab?c" archivo.txt
    ```
 
@@ -86,6 +91,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con el inicio de una línea.
 
    ```bash
+
    grep "^abc" archivo.txt
    ```
 
@@ -96,6 +102,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con el final de una línea.
 
    ```bash
+
    grep "abc$" archivo.txt
    ```
 
@@ -106,6 +113,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con cualquier carácter dentro de los corchetes.
 
    ```bash
+
    grep "[aeiou]" archivo.txt
    ```
 
@@ -116,6 +124,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Coincide con cualquier carácter que no esté dentro de los corchetes.
 
    ```bash
+
    grep "[^aeiou]" archivo.txt
    ```
 
@@ -126,6 +135,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
     Coincide con el patrón antes o después del `|`.
 
     ```bash
+
     grep "abc\|def" archivo.txt
     ```
 
@@ -136,6 +146,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
     Agrupa múltiples tokens juntos y recuerda el texto coincidente.
 
     ```bash
+
     grep "\(abc\)\{2,\}" archivo.txt
     ```
 
@@ -146,6 +157,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
     Escapa un metacaracter para ser utilizado como un literal.
 
     ```bash
+
     grep "a\.c" archivo.txt
     ```
 
@@ -158,6 +170,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Usa `\b` para coincidir con límites de palabras.
 
    ```bash
+
    grep "\bword\b" archivo.txt
    ```
 
@@ -168,6 +181,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Usa `\d` para coincidir con cualquier dígito.
 
    ```bash
+
    grep "\d" archivo.txt
    ```
 
@@ -178,6 +192,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Usa `\D` para coincidir con cualquier no-dígito.
 
    ```bash
+
    grep "\D" archivo.txt
    ```
 
@@ -188,6 +203,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Usa `\s` para coincidir con cualquier carácter de espacio en blanco.
 
    ```bash
+
    grep "\s" archivo.txt
    ```
 
@@ -198,6 +214,7 @@ Las expresiones regulares `RegEx` son herramientas poderosas utilizadas para la 
    Usa `\S` para coincidir con cualquier carácter que no sea espacio en blanco.
 
    ```bash
+
    grep "\S" archivo.txt
    ```
 

@@ -61,6 +61,7 @@ Y en octal, `rwxr-xr--` se representa como `754`.
 - Agregar permiso de ejecución para el usuario:
 
   ```bash
+
   chmod u+x archivo.txt
   ```
 
@@ -69,7 +70,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod g+w archivo.txt
-
   ```
 
 - Agregar permiso de lectura para otros:
@@ -77,7 +77,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod o+r archivo.txt
-
   ```
 
 **Quitar permiso:**
@@ -87,7 +86,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod u-x archivo.txt
-
   ```
 
 - Quitar permiso de escritura para el grupo:
@@ -95,7 +93,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod g-w archivo.txt
-
   ```
 
 - Quitar permiso de lectura para otros:
@@ -103,7 +100,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod o-r archivo.txt
-
   ```
 
 **Cambiar permiso:**
@@ -113,7 +109,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod u=rw,g=,o=r archivo.txt
-
   ```
 
 ### Usando Números (Modo Octal)
@@ -123,7 +118,6 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod 755 archivo.txt
-
   ```
 
 - Establecer **lectura** y **escritura** para el usuario, quitar **todos** los permisos para el **grupo** y establecer permiso de **lectura** para **otros**:
@@ -131,5 +125,4 @@ Y en octal, `rwxr-xr--` se representa como `754`.
   ```bash
 
   chmod 604 archivo.txt
-
   ```

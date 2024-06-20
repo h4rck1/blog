@@ -34,6 +34,7 @@ Se utiliza comúnmente para referirse a los flujos de datos estándar en sistema
 Redirige la salida estándar de un comando a un archivo. Si el archivo existe, se sobrescribe.
 
 ```bash
+
 ls > lista.txt
 ```
 
@@ -44,6 +45,7 @@ ls > lista.txt
 Redirige la salida estándar de un comando a un archivo, añadiendo la salida al final del archivo si ya existe.
 
 ```bash
+
 echo "Nueva línea" >> lista.txt
 ```
 
@@ -54,6 +56,7 @@ echo "Nueva línea" >> lista.txt
 Redirige la salida de error estándar de un comando a un archivo.
 
 ```bash
+
 ls archivo_que_no_existe 2> errorlog.txt
 ```
 
@@ -64,6 +67,7 @@ ls archivo_que_no_existe 2> errorlog.txt
 Redirige tanto la salida estándar como la salida de error estándar a un archivo.
 
 ```bash
+
 ls archivo_que_si_existe archivo_que_no_existe &> outputlog.txt
 ```
 
@@ -74,6 +78,7 @@ ls archivo_que_si_existe archivo_que_no_existe &> outputlog.txt
 Redirige la entrada estándar de un comando desde un archivo.
 
 ```bash
+
 wc -l < lista.txt
 ```
 
@@ -82,6 +87,7 @@ wc -l < lista.txt
 ### Redirigiendo la Salida Estándar y el Error Estándar por Separado
 
 ```bash
+
 ls archivo_que_si_existe archivo_que_no_existe > output.txt 2> error.txt
 ```
 
@@ -90,6 +96,7 @@ ls archivo_que_si_existe archivo_que_no_existe > output.txt 2> error.txt
 ### Redirigiendo la Salida Estándar y el Error Estándar al Mismo Archivo
 
 ```bash
+
 ls archivo_que_si_existe archivo_que_no_existe > todos_los_errores.txt 2>&1
 ```
 
@@ -100,6 +107,7 @@ ls archivo_que_si_existe archivo_que_no_existe > todos_los_errores.txt 2>&1
 Combinando pipes `|` con redirección para procesar datos entre múltiples comandos.
 
 ```bash
+
 ls | grep "patrón" > resultado.txt
 ```
 
@@ -108,6 +116,7 @@ ls | grep "patrón" > resultado.txt
 ### Leyendo desde un Archivo y Redirigiendo la Salida
 
 ```bash
+
 sort < lista_desordenada.txt > lista_ordenada.txt
 ```
 
@@ -116,6 +125,7 @@ sort < lista_desordenada.txt > lista_ordenada.txt
 ### Redirigiendo STDERR a STDOUT
 
 ```bash
+
 command 2>&1 | tee output_y_error.txt
 ```
 
@@ -128,6 +138,7 @@ command 2>&1 | tee output_y_error.txt
 Redirige la salida de error a `/dev/null` para ignorarla.
 
 ```bash
+
 ls archivo_que_no_existe 2> /dev/null
 ```
 
@@ -136,6 +147,7 @@ ls archivo_que_no_existe 2> /dev/null
 ### Combinando Múltiples Comandos con Diferentes Redirecciones
 
 ```bash
+
 command1 > output.txt 2>&1 | command2 2> solo_errores.txt
 ```
 
