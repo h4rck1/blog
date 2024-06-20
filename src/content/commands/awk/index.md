@@ -9,6 +9,7 @@ isSpanish: true
 ---
 
 ```bash
+
 awk 'patrón {acción}' [archivo]
 ```
 
@@ -34,7 +35,6 @@ Usa `awk` para extraer campos o columnas específicas de archivos de texto, como
 ```bash
 
 awk '{print $1, $3, $NF}' archivo.txt
-
 ```
 
 ### Imprimir líneas donde el último campo coincide con un patrón
@@ -44,7 +44,6 @@ Para imprimir líneas donde el último campo coincide con un patrón específico
 ```bash
 
 awk '$NF ~ /patrón/' archivo.txt
-
 ```
 
 ### Imprimir el penúltimo campo
@@ -54,7 +53,6 @@ Para imprimir el penúltimo campo de cada línea, puedes usar `$(NF-1)`.
 ```bash
 
 awk '{print $(NF-1)}' archivo.txt
-
 ```
 
 ### Filtrar filas basadas en una condición
@@ -64,7 +62,6 @@ awk '{print $(NF-1)}' archivo.txt
 ```bash
 
 awk '/patrón/ {print $0}' archivo.txt
-
 ```
 
 ### Procesar Archivos de Registro
@@ -74,7 +71,6 @@ Usa `awk` para procesar archivos de registro y extraer información significativ
 ```bash
 
 awk '$3 == "ERROR" {print $0}' logarchivo.txt
-
 ```
 
 > Este comando imprime todas las líneas donde la tercera columna es "ERROR".
@@ -86,7 +82,6 @@ awk '$3 == "ERROR" {print $0}' logarchivo.txt
 ```bash
 
 awk '{sum += $1} END {print sum}' numberos.txt
-
 ```
 
 > Este comando suma los valores en la primera columna de `numeros.txt` e imprime el total.
@@ -100,7 +95,6 @@ awk '{sum += $1} END {print sum}' numberos.txt
 ```bash
 
 awk '{gsub(/texto_antiguo/, "texto_nuevo"); print}' archivo.txt
-
 ```
 
 > Este comando reemplaza todas las ocurrencias de "texto_antiguo" con "texto_nuevo" en `archivo.txt`.
@@ -112,7 +106,6 @@ awk '{gsub(/texto_antiguo/, "texto_nuevo"); print}' archivo.txt
 ```bash
 
 awk -F',' '{print $1, $2}' archivo.csv
-
 ```
 
 > Este comando usa una coma como separador de campos e imprime la primera y segunda columnas de un archivo CSV.
@@ -124,7 +117,6 @@ awk -F',' '{print $1, $2}' archivo.csv
 ```bash
 
 awk '{if ($1 > 100 && $2 < 50) print $0}' archivo.txt
-
 ```
 
 > Este comando imprime líneas donde la primera columna es mayor que 100 y la segunda columna es menor que 50.
@@ -136,7 +128,6 @@ awk '{if ($1 > 100 && $2 < 50) print $0}' archivo.txt
 ```bash
 
 awk '{printf "Nombre: %s, Edad: %d\n", $1, $2}' archivo.txt
-
 ```
 
 > Este comando imprime la primera y segunda columnas de manera formateada.
@@ -148,7 +139,6 @@ awk '{printf "Nombre: %s, Edad: %d\n", $1, $2}' archivo.txt
 ```bash
 
 awk '{arr[$1]++} END {for (i in arr) print i, arr[i]}' archivo.txt
-
 ```
 
 > Este comando cuenta las ocurrencias de cada valor único en la primera columna e imprime los resultados.
